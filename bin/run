@@ -7,9 +7,7 @@ use Phplrt\LanguageServer\LanguageServer;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$logger = new Logger('ZendDebug', [
-    new StreamHandler(STDOUT),
-]);
+$logger = new Logger('ZendDebug', [new StreamHandler(STDOUT)]);
 
 $lsp = new LanguageServer($logger);
 $lsp->tcp();
