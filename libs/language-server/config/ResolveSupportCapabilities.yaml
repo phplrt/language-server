@@ -1,0 +1,5 @@
+Phplrt\LanguageServer\Protocol\ResolveSupportCapabilities:
+  properties:
+    properties:
+      read_only: false
+      type: array<string>

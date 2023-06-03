@@ -1,0 +1,16 @@
+{
+    "name": "phplrt/language-server-rpc",
+    "require": {
+        "php": "^8.1",
+        "ext-json": "*",
+        "cache/array-adapter": "^1.2",
+        "jms/serializer": "^3.23"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phplrt\\LanguageServer\\RPC\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

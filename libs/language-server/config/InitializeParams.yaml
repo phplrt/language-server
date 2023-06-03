@@ -1,0 +1,5 @@
+Phplrt\LanguageServer\Protocol\InitializeParams:
+  properties:
+    workspaceFolders:
+      read_only: false
+      type: array<Phplrt\LanguageServer\Protocol\WorkspaceFolder>

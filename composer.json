@@ -1,0 +1,41 @@
+{
+    "repositories": [
+        {"type": "path", "url": "libs/language-server"},
+        {"type": "path", "url": "libs/rpc"}
+    ],
+    "require": {
+        "php": "^8.1",
+        "phplrt/language-server": "*",
+        "phplrt/rpc": "*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.17",
+        "monolog/monolog": "^3.3",
+        "vimeo/psalm": "^5.12",
+        "phpunit/phpunit": "^10.1",
+        "symfony/var-dumper": "^5.4|^6.0"
+    },
+    "scripts": {
+        "static": "@static:check",
+        "static:check": "psalm --no-cache",
+        "static:fix": "psalm --no-cache --alter",
+
+        "phpcs": "@phpcs:check",
+        "phpcs:check": "php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes --dry-run",
+        "phpcs:fix": "php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes",
+
+        "test": "@test:unit",
+        "test:unit": "phpunit --testdox"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev",
+            "dev-main": "1.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -1,0 +1,4 @@
+*.jar
+*.vsix
+/node_moduels
+package.lock

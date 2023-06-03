@@ -1,0 +1,73 @@
+{
+    "name": "@phplrt/vscode-extension",
+    "displayName": "Language Server Protocol Example Extension",
+    "version": "0.0.1",
+    "license": "MIT",
+    "private": true,
+    "main": "./src/extension",
+    "icon": "./images/icon.png",
+    "activationEvents": [
+        "*"
+    ],
+    "capabilities": {
+        "untrustedWorkspaces": {
+            "supported": false,
+            "description": ""
+        }
+    },
+    "categories": [
+        "Linters",
+        "Programming Languages"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "title": "Enable Language Server Extension",
+                "command": "phplrt-lsp.enable",
+                "category": "phplrt"
+            },
+            {
+                "title": "Disable Language Server Extension",
+                "command": "phplrt-lsp.disable",
+                "category": "phplrt"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "PHPLRT Language Server",
+            "properties": {
+                "phplrt-lsp.phpExecutablePath": {
+                    "type": "string",
+                    "default": "php",
+                    "description": "Optional, defaults to searching for \"php\". The path to a PHP 8.1+ executable to use to execute the Zend Debug LSP server"
+                },
+                "phplrt-lsp.languageServerPort": {
+                    "type": "number",
+                    "default": 5007,
+                    "description": ""
+                },
+                "phplrt-lsp.enabled": {
+                    "type": "boolean",
+                    "default": true
+                }
+            }
+        }
+    },
+    "engines": {
+        "vscode": "^1.73.0"
+    },
+    "extensionKind": [
+        "workspace"
+    ],
+    "galleryBanner": {
+        "color": "#582a24",
+        "theme": "dark"
+    },
+    "devDependencies": {
+        "@types/node": "^17.0.34",
+        "@types/vscode": "^1.67.0"
+    },
+    "dependencies": {
+        "vscode-languageclient": "^8.0.1"
+    }
+}

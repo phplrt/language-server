@@ -1,0 +1,5 @@
+Phplrt\LanguageServer\Protocol\WorkspaceEditClientCapabilities:
+  properties:
+    resourceOperations:
+      read_only: false
+      type: array<Phplrt\LanguageServer\Protocol\ResourceOperationKind>
