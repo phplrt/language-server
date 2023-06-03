@@ -1,0 +1,14 @@
+{
+    "name": "phplrt/rpc-message-factory",
+    "require": {
+        "php": "^8.1",
+        "phplrt/rpc-message": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phplrt\\RPC\\Message\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

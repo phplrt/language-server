@@ -2,28 +2,28 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\LanguageServer\RPC\Protocol;
+namespace Phplrt\RPC\Protocol;
 
-use Phplrt\LanguageServer\RPC\Exception\DecodingException;
-use Phplrt\LanguageServer\RPC\Exception\DecodingExceptionInterface;
-use Phplrt\LanguageServer\RPC\Exception\EncodingException;
-use Phplrt\LanguageServer\RPC\Exception\InvalidFieldTypeException;
-use Phplrt\LanguageServer\RPC\Exception\InvalidFieldValueException;
-use Phplrt\LanguageServer\RPC\Exception\RequiredFieldNotDefinedException;
-use Phplrt\LanguageServer\RPC\IdFactory;
-use Phplrt\LanguageServer\RPC\IdFactoryInterface;
-use Phplrt\LanguageServer\RPC\Message\FailureResponseInterface;
-use Phplrt\LanguageServer\RPC\Message\IdInterface;
-use Phplrt\LanguageServer\RPC\Message\MessageInterface;
-use Phplrt\LanguageServer\RPC\Message\NotificationInterface;
-use Phplrt\LanguageServer\RPC\Message\RequestInterface;
-use Phplrt\LanguageServer\RPC\Message\ResponseInterface;
-use Phplrt\LanguageServer\RPC\Message\SuccessfulResponseInterface;
-use Phplrt\LanguageServer\RPC\Protocol\JsonRPC\Signature;
-use Phplrt\LanguageServer\RPC\RequestFactory;
-use Phplrt\LanguageServer\RPC\RequestFactoryInterface;
-use Phplrt\LanguageServer\RPC\ResponseFactory;
-use Phplrt\LanguageServer\RPC\ResponseFactoryInterface;
+use Phplrt\RPC\Exception\DecodingException;
+use Phplrt\RPC\Exception\DecodingExceptionInterface;
+use Phplrt\RPC\Exception\EncodingException;
+use Phplrt\RPC\Exception\InvalidFieldTypeException;
+use Phplrt\RPC\Exception\InvalidFieldValueException;
+use Phplrt\RPC\Exception\RequiredFieldNotDefinedException;
+use Phplrt\RPC\Message\FailureResponseInterface;
+use Phplrt\RPC\Message\IdFactory;
+use Phplrt\RPC\Message\IdFactoryInterface;
+use Phplrt\RPC\Message\IdInterface;
+use Phplrt\RPC\Message\MessageInterface;
+use Phplrt\RPC\Message\NotificationInterface;
+use Phplrt\RPC\Message\RequestFactory;
+use Phplrt\RPC\Message\RequestFactoryInterface;
+use Phplrt\RPC\Message\RequestInterface;
+use Phplrt\RPC\Message\ResponseFactory;
+use Phplrt\RPC\Message\ResponseFactoryInterface;
+use Phplrt\RPC\Message\ResponseInterface;
+use Phplrt\RPC\Message\SuccessfulResponseInterface;
+use Phplrt\RPC\Protocol\JsonRPC\Signature;
 
 final class JsonRPCv2 implements EncoderInterface, DecoderInterface
 {
@@ -279,7 +279,7 @@ final class JsonRPCv2 implements EncoderInterface, DecoderInterface
     private function tryDecodeNullableId(mixed $id): IdInterface
     {
         if ($id === null) {
-            return $this->ids->createFromNull();
+            return $this->ids->createEmpty();
         }
 
         return $this->tryDecodeId($id);

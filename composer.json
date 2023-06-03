@@ -1,14 +1,22 @@
 {
-    "name": "phplrt/language-server",
+    "name": "phplrt/lsp",
     "type": "library",
     "repositories": [
-        {"type": "path", "url": "libs/rpc"}
+        {"type": "path", "url": "libs/rpc"},
+        {"type": "path", "url": "libs/rpc-dispatcher"},
+        {"type": "path", "url": "libs/rpc-hydrator"},
+        {"type": "path", "url": "libs/rpc-message"},
+        {"type": "path", "url": "libs/rpc-message-factory"}
     ],
     "require": {
         "php": "^8.1",
         "evenement/evenement": "^1.0|^2.0|^3.0",
         "psr/log": "^1.0|^2.0|^3.0",
-        "phplrt/language-server-rpc": "*",
+        "phplrt/rpc": "*",
+        "phplrt/rpc-dispatcher": "*",
+        "phplrt/rpc-hydrator": "*",
+        "phplrt/rpc-message": "*",
+        "phplrt/rpc-message-factory": "*",
         "react/socket": "^1.12",
         "symfony/yaml": "^5.4|^6.0"
     },

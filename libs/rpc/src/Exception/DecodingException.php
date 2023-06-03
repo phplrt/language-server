@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\LanguageServer\RPC\Exception;
+namespace Phplrt\RPC\Exception;
 
 class DecodingException extends \RuntimeException implements DecodingExceptionInterface
 {

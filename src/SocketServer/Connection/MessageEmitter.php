@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Phplrt\LanguageServer\SocketServer\Connection;
 
 use Evenement\EventEmitter;
-use Phplrt\LanguageServer\RPC\Exception\DecodingExceptionInterface;
-use Phplrt\LanguageServer\RPC\Protocol\DecoderInterface;
-use Phplrt\LanguageServer\RPC\Protocol\JsonRPCv2;
+use Phplrt\RPC\Exception\DecodingExceptionInterface;
+use Phplrt\RPC\Protocol\DecoderInterface;
+use Phplrt\RPC\Protocol\JsonRPCv2;
 
 /**
  * @internal This is an internal library class, please do not use it in your code.

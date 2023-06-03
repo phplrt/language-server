@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\LanguageServer\RPC\Protocol;
+namespace Phplrt\RPC\Protocol;
 
-use Phplrt\LanguageServer\RPC\Exception\DecodingExceptionInterface;
-use Phplrt\LanguageServer\RPC\Message\MessageInterface;
+use Phplrt\RPC\Exception\DecodingExceptionInterface;
+use Phplrt\RPC\Message\MessageInterface;
 
 interface DecoderInterface
 {

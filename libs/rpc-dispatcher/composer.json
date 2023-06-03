@@ -1,0 +1,16 @@
+{
+    "name": "phplrt/rpc-dispatcher",
+    "require": {
+        "php": "^8.1",
+        "phplrt/rpc-hydrator": "*",
+        "phplrt/rpc-message": "*",
+        "phplrt/rpc-message-factory": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phplrt\\RPC\\Dispatcher\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

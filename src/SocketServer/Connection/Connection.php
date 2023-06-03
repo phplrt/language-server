@@ -9,13 +9,13 @@ use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 use React\Socket\ConnectionInterface as SocketConnectionInterface;
 use Phplrt\LanguageServer\Connection\ConnectionInterface;
-use Phplrt\LanguageServer\RPC\Message\FailureResponseInterface;
-use Phplrt\LanguageServer\RPC\Message\NotificationInterface;
-use Phplrt\LanguageServer\RPC\Message\RequestInterface;
-use Phplrt\LanguageServer\RPC\Message\SuccessfulResponseInterface;
-use Phplrt\LanguageServer\RPC\Protocol\DecoderInterface;
-use Phplrt\LanguageServer\RPC\Protocol\EncoderInterface;
-use Phplrt\LanguageServer\RPC\Protocol\JsonRPCv2;
+use Phplrt\RPC\Message\FailureResponseInterface;
+use Phplrt\RPC\Message\NotificationInterface;
+use Phplrt\RPC\Message\RequestInterface;
+use Phplrt\RPC\Message\SuccessfulResponseInterface;
+use Phplrt\RPC\Protocol\DecoderInterface;
+use Phplrt\RPC\Protocol\EncoderInterface;
+use Phplrt\RPC\Protocol\JsonRPCv2;
 
 /**
  * @internal This is an internal library class, please do not use it in your code.

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Connection;
 
-use Phplrt\LanguageServer\RPC\Message\NotificationInterface;
-use Phplrt\LanguageServer\RPC\Message\RequestInterface;
+use Phplrt\RPC\Message\NotificationInterface;
+use Phplrt\RPC\Message\RequestInterface;
 
 interface ReceiverInterface
 {

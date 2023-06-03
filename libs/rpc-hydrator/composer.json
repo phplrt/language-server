@@ -1,0 +1,16 @@
+{
+    "name": "phplrt/rpc-hydrator",
+    "require": {
+        "php": "^8.1",
+        "ext-json": "*",
+        "cache/array-adapter": "^1.2",
+        "jms/serializer": "^3.23"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phplrt\\RPC\\Hydrator\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\LanguageServer\RPC\Protocol\JsonRPC;
+namespace Phplrt\RPC\Protocol\JsonRPC;
 
 enum Signature
 {

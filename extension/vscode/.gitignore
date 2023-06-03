@@ -1,4 +1,2 @@
-*.jar
-*.vsix
-/node_moduels
+/node_modules
 package.lock

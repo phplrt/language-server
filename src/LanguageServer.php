@@ -8,7 +8,7 @@ use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 use Phplrt\LanguageServer\Connection\ConnectionInterface;
 use Phplrt\LanguageServer\SocketServer\SocketServer;
-use Phplrt\LanguageServer\RPC\Hydrator\Hydrator;
+use Phplrt\RPC\Hydrator\Hydrator;
 
 final class LanguageServer
 {

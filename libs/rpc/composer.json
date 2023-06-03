@@ -1,14 +1,15 @@
 {
-    "name": "phplrt/language-server-rpc",
+    "name": "phplrt/rpc",
     "require": {
         "php": "^8.1",
         "ext-json": "*",
-        "cache/array-adapter": "^1.2",
-        "jms/serializer": "^3.23"
+        "phplrt/rpc-hydrator": "*",
+        "phplrt/rpc-message": "*",
+        "phplrt/rpc-message-factory": "*"
     },
     "autoload": {
         "psr-4": {
-            "Phplrt\\LanguageServer\\RPC\\": "src"
+            "Phplrt\\RPC\\": "src"
         }
     },
     "minimum-stability": "dev",

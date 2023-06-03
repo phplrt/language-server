@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer;
 
-use Psr\Log\LoggerInterface;
 use Phplrt\LanguageServer\Connection\ConnectionInterface;
 use Phplrt\LanguageServer\Protocol\CodeLens;
 use Phplrt\LanguageServer\Protocol\CodeLensOptions;
@@ -20,15 +19,16 @@ use Phplrt\LanguageServer\Protocol\Range;
 use Phplrt\LanguageServer\Protocol\ServerCapabilities;
 use Phplrt\LanguageServer\Protocol\ServerInfo;
 use Phplrt\LanguageServer\Protocol\TextDocumentSyncKind;
-use Phplrt\LanguageServer\RPC\Attribute\RpcMethod;
-use Phplrt\LanguageServer\RPC\AttributeAwareDispatcher;
-use Phplrt\LanguageServer\RPC\DispatcherInterface;
-use Phplrt\LanguageServer\RPC\Hydrator\ExtractorInterface;
-use Phplrt\LanguageServer\RPC\Hydrator\HydratorInterface;
-use Phplrt\LanguageServer\RPC\Message\FailureResponseInterface;
-use Phplrt\LanguageServer\RPC\Message\NotificationInterface;
-use Phplrt\LanguageServer\RPC\Message\RequestInterface;
-use Phplrt\LanguageServer\RPC\Message\SuccessfulResponseInterface;
+use Phplrt\RPC\Dispatcher\Attribute\RpcMethod;
+use Phplrt\RPC\Dispatcher\AttributeAwareDispatcher;
+use Phplrt\RPC\Dispatcher\DispatcherInterface;
+use Phplrt\RPC\Hydrator\ExtractorInterface;
+use Phplrt\RPC\Hydrator\HydratorInterface;
+use Phplrt\RPC\Message\FailureResponseInterface;
+use Phplrt\RPC\Message\NotificationInterface;
+use Phplrt\RPC\Message\RequestInterface;
+use Phplrt\RPC\Message\SuccessfulResponseInterface;
+use Psr\Log\LoggerInterface;
 
 final class Session
 {
@@ -109,19 +109,28 @@ final class Session
     #[RpcMethod(name: 'textDocument/codeLens')]
     public function codeLens(CodeLensParams $params): array
     {
-        return [
-            new CodeLens(
+        $text = $this->documents[$params->textDocument->uri] ?? '';
+        $result = [];
+
+        foreach (\explode("\n", $text) as $i => $line) {
+            if (\trim($line) === '') {
+                continue;
+            }
+
+            $result[] = new CodeLens(
                 range: new Range(
-                    start: new Position(0, 0),
-                    end: new Position(0, 120),
+                    start: new Position($i, 0),
+                    end: new Position($i, 120),
                 ),
                 command: new Command(
-                    title: 'Hello From LSP',
+                    title: 'Hello from "' . \trim($line) . '"',
                     command: 'hello',
                     arguments: [],
                 ),
-            )
-        ];
+            );
+        }
+
+        return $result;
     }
 
     #[RpcMethod(name: 'textDocument/didOpen')]

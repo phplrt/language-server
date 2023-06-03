@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\SocketServer\Connection;
 
-use Phplrt\LanguageServer\RPC\Message\MessageInterface;
+use Phplrt\RPC\Message\MessageInterface;
 
 /**
  * @internal This is an internal library class, please do not use it in your code.
