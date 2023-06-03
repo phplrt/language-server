@@ -4,14 +4,18 @@
 
 ## Language Server
 
-> Please note that this is an experimental зфслфпу!
+> Please note that this is an experimental package!
 
 Experimental Language Server Protocol implementation.
 
-## Requirements
+### Requirements
 
 - PHP ^8.1
 - ext-socket
+
+### Example
+
+![https://github.com/phplrt/language-server/assets/2461257/9c7013fb-b4b5-43f8-a1d3-b2de2638f45b](https://github.com/phplrt/language-server/assets/2461257/9c7013fb-b4b5-43f8-a1d3-b2de2638f45b)
 
 ### Resources
 
