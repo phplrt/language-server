@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\LanguageServer\Protocol;
+namespace Phplrt\LanguageServer\Protocol\Type;
 
 /**
  * Position in a text document expressed as zero-based line and character
@@ -49,8 +49,8 @@ final class Position
      *          defaults back to the line length.
      */
     public function __construct(
-        public readonly int $line,
-        public readonly int $character,
+        public readonly int $line = 0,
+        public readonly int $character = 0,
     ) {
     }
 }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\LanguageServer\Protocol;
+namespace Phplrt\LanguageServer\Protocol\Type;
 
 /**
  * A workspace folder inside a client.

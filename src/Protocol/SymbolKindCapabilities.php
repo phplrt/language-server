@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
+use Phplrt\LanguageServer\Protocol\Type\SymbolKind;
+
 /**
  * Specific capabilities for the {@see SymbolKind} in the `workspace/symbol`
  * request.

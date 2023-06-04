@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\LanguageServer\Protocol;
+namespace Phplrt\LanguageServer\Protocol\Type;
 
 /**
  * Represents a reference to a command. Provides a title which will be used to

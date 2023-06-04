@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\LanguageServer\Protocol;
+namespace Phplrt\LanguageServer\Protocol\Type;
 
 /**
  * A range in a text document expressed as (zero-based) start and end positions.
@@ -24,8 +24,8 @@ final class Range
      * @param Position $end The range's end position.
      */
     public function __construct(
-        public readonly Position $start,
-        public readonly Position $end,
+        public readonly Position $start = new Position(),
+        public readonly Position $end = new Position(),
     ) {
     }
 }

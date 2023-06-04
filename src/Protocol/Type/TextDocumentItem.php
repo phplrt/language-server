@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\LanguageServer\Protocol;
+namespace Phplrt\LanguageServer\Protocol\Type;
 
 /**
  * An item to transfer a text document from the client to the server.

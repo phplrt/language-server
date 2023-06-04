@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
+use Phplrt\LanguageServer\Protocol\Type\Range;
+
 /**
  * An event describing a change to a text document. If only a text is provided
  * it is considered to be the full content of the document.

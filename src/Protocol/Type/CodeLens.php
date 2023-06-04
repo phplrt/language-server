@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\LanguageServer\Protocol;
+namespace Phplrt\LanguageServer\Protocol\Type;
 
 /**
  * A code lens represents a {@see Command} command that should be shown along
@@ -18,7 +18,7 @@ final class CodeLens
      * @param Range $range The range in which this code lens is valid. Should
      *        only span a single line.
      * @param Command|null $command The command this code lens represents.
-     * @param mixed|null $data A data entry field that is preserved on a code
+     * @param mixed $data A data entry field that is preserved on a code
      *        lens item between a CodeLensRequest and a CodeLensResolveRequest.
      */
     public function __construct(

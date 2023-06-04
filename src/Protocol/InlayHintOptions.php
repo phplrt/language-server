@@ -18,7 +18,7 @@ final class InlayHintOptions extends WorkDoneProgressOptions
      */
     public function __construct(
         public readonly ?bool $resolveProvider = null,
-        ?bool $workDoneProgress = null
+        ?bool $workDoneProgress = null,
     ) {
         parent::__construct($workDoneProgress);
     }
