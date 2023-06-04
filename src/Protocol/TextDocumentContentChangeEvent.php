@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
-use Phplrt\LanguageServer\Protocol\Type\Range;
+use Phplrt\LanguageServer\Type\Range;
 
 /**
  * An event describing a change to a text document. If only a text is provided
@@ -24,6 +24,5 @@ final class TextDocumentContentChangeEvent
         public readonly ?Range $range = null,
         public readonly ?int $rangeLength = null,
         public readonly string $text = '',
-    ) {
-    }
+    ) {}
 }

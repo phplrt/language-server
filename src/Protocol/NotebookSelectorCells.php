@@ -11,6 +11,5 @@ final class NotebookSelectorCells
 {
     public function __construct(
         public readonly string $language,
-    ) {
-    }
+    ) {}
 }

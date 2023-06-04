@@ -16,6 +16,5 @@ final class FileOperationRegistrationOptions
      */
     public function __construct(
         public readonly array $filters = [],
-    ) {
-    }
+    ) {}
 }

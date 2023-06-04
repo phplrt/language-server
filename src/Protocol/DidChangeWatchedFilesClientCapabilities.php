@@ -18,6 +18,5 @@ final class DidChangeWatchedFilesClientCapabilities
     public function __construct(
         public readonly ?bool $dynamicRegistration = null,
         public readonly ?bool $relativePatternSupport = null,
-    ) {
-    }
+    ) {}
 }

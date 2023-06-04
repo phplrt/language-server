@@ -68,6 +68,5 @@ final class WorkspaceClientCapabilities
         public readonly ?InlineValueWorkspaceClientCapabilities $inlineValue = null,
         public readonly ?InlayHintWorkspaceClientCapabilities $inlayHint = null,
         public readonly ?DiagnosticWorkspaceClientCapabilities $diagnostics = null,
-    ) {
-    }
+    ) {}
 }

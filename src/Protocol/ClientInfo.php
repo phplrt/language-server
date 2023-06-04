@@ -18,6 +18,5 @@ final class ClientInfo
     public function __construct(
         public readonly string $name,
         public readonly ?string $version,
-    ) {
-    }
+    ) {}
 }

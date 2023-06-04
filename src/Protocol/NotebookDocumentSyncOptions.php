@@ -26,6 +26,5 @@ final class NotebookDocumentSyncOptions
     public function __construct(
         public readonly array $notebookSelector = [],
         public readonly ?bool $save = null,
-    ) {
-    }
+    ) {}
 }

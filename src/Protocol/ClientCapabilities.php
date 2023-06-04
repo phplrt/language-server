@@ -31,6 +31,5 @@ final class ClientCapabilities
         public readonly ?WindowClientCapabilities $window = null,
         public readonly ?GeneralClientCapabilities $general = null,
         public readonly mixed $experimental = null,
-    ) {
-    }
+    ) {}
 }

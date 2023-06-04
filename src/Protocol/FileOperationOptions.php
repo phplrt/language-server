@@ -18,6 +18,5 @@ final class FileOperationOptions
         public readonly ?FileOperationRegistrationOptions $willRename = null,
         public readonly ?FileOperationRegistrationOptions $didDelete = null,
         public readonly ?FileOperationRegistrationOptions $willDelete = null,
-    ) {
-    }
+    ) {}
 }

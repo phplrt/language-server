@@ -33,6 +33,5 @@ final class WorkspaceEditClientCapabilities
         public readonly ?FailureHandlingKind $failureHandling = null,
         public readonly ?bool $normalizesLineEndings = null,
         public readonly ?ChangeAnnotationSupport $changeAnnotationSupport = null,
-    ) {
-    }
+    ) {}
 }

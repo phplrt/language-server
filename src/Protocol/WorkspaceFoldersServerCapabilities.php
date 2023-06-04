@@ -19,6 +19,5 @@ final class WorkspaceFoldersServerCapabilities
     public function __construct(
         public readonly ?bool $supported = null,
         public readonly bool|string|null $changeNotifications = null,
-    ) {
-    }
+    ) {}
 }

@@ -15,6 +15,5 @@ final class SaveOptions
      */
     public function __construct(
         public readonly ?bool $includeText = null,
-    ) {
-    }
+    ) {}
 }

@@ -28,6 +28,5 @@ final class TextDocumentSyncOptions
         public readonly ?bool $willSave = null,
         public readonly ?bool $willSaveWaitUntil = null,
         public readonly bool|SaveOptions|null $save = null,
-    ) {
-    }
+    ) {}
 }

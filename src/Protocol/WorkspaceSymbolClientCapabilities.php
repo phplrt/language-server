@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
-use Phplrt\LanguageServer\Protocol\Type\SymbolKind;
+use Phplrt\LanguageServer\Type\SymbolKind;
 
 /**
  * Client capabilities for a "workspace/symbol" RPC request.
@@ -31,6 +31,5 @@ final class WorkspaceSymbolClientCapabilities
         public readonly ?SymbolKindCapabilities $symbolKind = null,
         public readonly ?TagSupportCapabilities $tagSupport = null,
         public readonly ?ResolveSupportCapabilities $resolveSupport = null,
-    ) {
-    }
+    ) {}
 }

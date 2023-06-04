@@ -19,6 +19,5 @@ final class ResolveSupportCapabilities
      */
     public function __construct(
         public readonly array $properties = [],
-    ) {
-    }
+    ) {}
 }

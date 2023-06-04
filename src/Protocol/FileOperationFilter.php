@@ -19,6 +19,5 @@ final class FileOperationFilter
     public function __construct(
         public readonly ?string $scheme,
         public readonly FileOperationPattern $pattern,
-    ) {
-    }
+    ) {}
 }

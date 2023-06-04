@@ -17,6 +17,5 @@ final class FileOperationPatternOptions
      */
     public function __construct(
         public readonly ?bool $ignoreCase = null,
-    ) {
-    }
+    ) {}
 }

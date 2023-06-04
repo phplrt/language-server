@@ -20,6 +20,5 @@ final class InitializeResult
         public readonly ServerCapabilities $capabilities = new ServerCapabilities(),
         public readonly ?ServerInfo $serverInfo = null,
         public readonly mixed $custom = null,
-    ) {
-    }
+    ) {}
 }

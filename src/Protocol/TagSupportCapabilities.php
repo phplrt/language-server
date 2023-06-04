@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
-use Phplrt\LanguageServer\Protocol\Type\SymbolTag;
+use Phplrt\LanguageServer\Type\SymbolTag;
 
 /**
  * The client supports tags on `SymbolInformation`. Clients supporting tags
@@ -19,6 +19,5 @@ final class TagSupportCapabilities
      */
     public function __construct(
         public readonly array $valueSet = [],
-    ) {
-    }
+    ) {}
 }

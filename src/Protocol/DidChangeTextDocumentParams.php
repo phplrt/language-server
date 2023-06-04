@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Phplrt\LanguageServer\Protocol;
 
 use JMS\Serializer\Annotation\Type;
-use Phplrt\LanguageServer\Protocol\Type\VersionedTextDocumentIdentifier;
+use Phplrt\LanguageServer\Type\VersionedTextDocumentIdentifier;
 
 /**
  * The change text document notification's parameters.
@@ -34,6 +34,5 @@ final class DidChangeTextDocumentParams
     public function __construct(
         public readonly VersionedTextDocumentIdentifier $textDocument,
         public readonly array $contentChanges = [],
-    ) {
-    }
+    ) {}
 }

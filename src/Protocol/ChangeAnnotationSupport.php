@@ -19,6 +19,5 @@ final class ChangeAnnotationSupport
      */
     public function __construct(
         public readonly ?bool $groupsOnLabel = null,
-    ) {
-    }
+    ) {}
 }

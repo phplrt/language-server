@@ -8,6 +8,5 @@ class WorkDoneProgressOptions
 {
     public function __construct(
         public readonly ?bool $workDoneProgress = null,
-    ) {
-    }
+    ) {}
 }

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
-use Phplrt\LanguageServer\Protocol\Type\TextDocumentIdentifier;
+use Phplrt\LanguageServer\Type\TextDocumentIdentifier;
 
 final class CodeLensParams
 {
@@ -13,6 +13,5 @@ final class CodeLensParams
      */
     public function __construct(
         public readonly TextDocumentIdentifier $textDocument,
-    ) {
-    }
+    ) {}
 }

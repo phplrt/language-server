@@ -12,6 +12,5 @@ class WorkDoneProgressParams
      */
     public function __construct(
         public readonly int|string|null $progressToken = null,
-    ) {
-    }
+    ) {}
 }

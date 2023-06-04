@@ -12,6 +12,5 @@ final class DidChangeConfigurationClientCapabilities
      */
     public function __construct(
         public readonly ?bool $dynamicRegistration = null,
-    ) {
-    }
+    ) {}
 }

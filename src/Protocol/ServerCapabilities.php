@@ -45,6 +45,5 @@ final class ServerCapabilities
         public readonly DiagnosticOptions|DiagnosticRegistrationOptions|null $diagnosticProvider = null,
         public readonly WorkspaceServerCapabilities|null $workspace = null,
         public readonly mixed $experimental = null,
-    ) {
-    }
+    ) {}
 }

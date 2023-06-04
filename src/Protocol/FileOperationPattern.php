@@ -37,6 +37,5 @@ final class FileOperationPattern
         public readonly string $glob = '*',
         public readonly ?FileOperationPatternKind $matches = null,
         public readonly ?FileOperationPatternOptions $options = null,
-    ) {
-    }
+    ) {}
 }

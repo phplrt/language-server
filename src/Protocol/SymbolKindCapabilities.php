@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
-use Phplrt\LanguageServer\Protocol\Type\SymbolKind;
+use Phplrt\LanguageServer\Type\SymbolKind;
 
 /**
  * Specific capabilities for the {@see SymbolKind} in the `workspace/symbol`
@@ -24,6 +24,5 @@ final class SymbolKindCapabilities
      */
     public function __construct(
         public readonly ?array $valueSet = null,
-    ) {
-    }
+    ) {}
 }

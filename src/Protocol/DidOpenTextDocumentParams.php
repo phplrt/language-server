@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
-use Phplrt\LanguageServer\Protocol\Type\TextDocumentItem;
+use Phplrt\LanguageServer\Type\TextDocumentItem;
 
 /**
  * The parameters sent in an open text document notification
@@ -16,6 +16,5 @@ final class DidOpenTextDocumentParams
      */
     public function __construct(
         public readonly TextDocumentItem $textDocument,
-    ) {
-    }
+    ) {}
 }

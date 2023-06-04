@@ -20,6 +20,5 @@ final class WorkspaceServerCapabilities
     public function __construct(
         public readonly ?WorkspaceFoldersServerCapabilities $workspaceFolders = null,
         public readonly ?FileOperationOptions $fileOperations = null,
-    ) {
-    }
+    ) {}
 }
