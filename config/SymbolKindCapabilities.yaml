@@ -1,5 +1,0 @@
-Phplrt\LanguageServer\Protocol\SymbolKindCapabilities:
-  properties:
-    valueSet:
-      read_only: false
-      type: array<Phplrt\LanguageServer\Protocol\SymbolKind>

@@ -22,7 +22,7 @@ final class ClientCapabilities
      * @param GeneralClientCapabilities|null $general General client
      *        capabilities.
      *        @since 3.16.0
-     * @param mixed|null $experimental Experimental client capabilities.
+     * @param mixed $experimental Experimental client capabilities.
      */
     public function __construct(
         public readonly ?WorkspaceClientCapabilities $workspace = null,

@@ -4,7 +4,7 @@
         "php": "^8.1",
         "ext-json": "*",
         "cache/array-adapter": "^1.2",
-        "jms/serializer": "^3.23"
+        "cuyz/valinor": "^1.4"
     },
     "autoload": {
         "psr-4": {

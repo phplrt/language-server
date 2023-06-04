@@ -2,12 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\LanguageServer\SocketServer\Connection;
+namespace Phplrt\LanguageServer\Transport\Socket;
 
 use Evenement\EventEmitter;
-use Psr\Log\LoggerInterface;
-use Psr\Log\NullLogger;
-use React\Socket\ConnectionInterface as SocketConnectionInterface;
 use Phplrt\LanguageServer\Connection\ConnectionInterface;
 use Phplrt\RPC\Message\FailureResponseInterface;
 use Phplrt\RPC\Message\NotificationInterface;
@@ -16,10 +13,13 @@ use Phplrt\RPC\Message\SuccessfulResponseInterface;
 use Phplrt\RPC\Protocol\DecoderInterface;
 use Phplrt\RPC\Protocol\EncoderInterface;
 use Phplrt\RPC\Protocol\JsonRPCv2;
+use Psr\Log\LoggerInterface;
+use Psr\Log\NullLogger;
+use React\Socket\ConnectionInterface as SocketConnectionInterface;
 
 /**
- * @internal This is an internal library class, please do not use it in your code.
- * @psalm-internal Phplrt\LanguageServer\SocketServer
+ * @internal This is an internal class, please do not use it in your application code.
+ * @psalm-internal Phplrt\LanguageServer\Transport
  */
 final class Connection extends EventEmitter implements ConnectionInterface
 {

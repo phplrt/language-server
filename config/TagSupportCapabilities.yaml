@@ -1,5 +1,0 @@
-Phplrt\LanguageServer\Protocol\TagSupportCapabilities:
-  properties:
-    valueSet:
-      read_only: false
-      type: array<Phplrt\LanguageServer\Protocol\SymbolTag>

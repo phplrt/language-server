@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\LanguageServer;
+namespace App;
 
 use Phplrt\LanguageServer\Connection\ConnectionInterface;
 use Phplrt\LanguageServer\Protocol\CodeLens;
@@ -19,21 +19,12 @@ use Phplrt\LanguageServer\Protocol\Range;
 use Phplrt\LanguageServer\Protocol\ServerCapabilities;
 use Phplrt\LanguageServer\Protocol\ServerInfo;
 use Phplrt\LanguageServer\Protocol\TextDocumentSyncKind;
+use Phplrt\LanguageServer\ServerInterface;
 use Phplrt\RPC\Dispatcher\Attribute\RpcMethod;
-use Phplrt\RPC\Dispatcher\AttributeAwareDispatcher;
-use Phplrt\RPC\Dispatcher\DispatcherInterface;
-use Phplrt\RPC\Hydrator\ExtractorInterface;
-use Phplrt\RPC\Hydrator\HydratorInterface;
-use Phplrt\RPC\Message\FailureResponseInterface;
-use Phplrt\RPC\Message\NotificationInterface;
-use Phplrt\RPC\Message\RequestInterface;
-use Phplrt\RPC\Message\SuccessfulResponseInterface;
 use Psr\Log\LoggerInterface;
 
-final class Session
+final class Server implements ServerInterface
 {
-    public readonly DispatcherInterface $dispatcher;
-
     /**
      * @var array<string, string>
      */
@@ -42,50 +33,14 @@ final class Session
     public function __construct(
         private readonly LoggerInterface $logger,
         private readonly ConnectionInterface $connection,
-        HydratorInterface $hydrator,
-        ExtractorInterface $extractor,
     ) {
-        $this->dispatcher = new AttributeAwareDispatcher(
-            context: $this,
-            hydrator: $hydrator,
-            extractor: $extractor,
-        );
-
-        $this->subscribe();
-    }
-
-    private function subscribe(): void
-    {
-        $this->connection->onRequest(function (RequestInterface $request) {
-            $this->logger->info(' -> call [' . $request->getId() . '] ' . $request->getMethod());
-
-            $response = $this->dispatcher->dispatchMethod($request);
-
-            if ($response instanceof SuccessfulResponseInterface) {
-                $this->connection->success($response);
-                $this->logger->info(' <- result [' . $request->getId() . ']');
-            }
-
-            if ($response instanceof FailureResponseInterface) {
-                $this->connection->error($response);
-                $this->logger->info(' <- error [' . $request->getId() . '] ' . $response->getErrorMessage());
-            }
-        });
-
-        $this->connection->onNotification(function (NotificationInterface $notice) {
-            $this->logger->info(' -> notify ' . $notice->getMethod());
-
-            $response = $this->dispatcher->dispatchProcedure($notice);
-
-            if ($response instanceof FailureResponseInterface) {
-                $this->connection->error($response);
-            }
-        });
     }
 
     #[RpcMethod]
     public function initialize(InitializeParams $initialize): InitializeResult
     {
+        $this->logger->info(__FUNCTION__, [$initialize]);
+
         return new InitializeResult(
             capabilities: new ServerCapabilities(
                 textDocumentSync: TextDocumentSyncKind::FULL,
@@ -94,7 +49,7 @@ final class Session
                 ),
             ),
             serverInfo: new ServerInfo(
-                name: 'PHPLRT Example Language Server',
+                name: 'Example Language Server',
                 version: '0.0.1',
             ),
         );
@@ -103,12 +58,14 @@ final class Session
     #[RpcMethod]
     public function initialized(): void
     {
-        // No-op
+        $this->logger->info(__FUNCTION__);
     }
 
     #[RpcMethod(name: 'textDocument/codeLens')]
     public function codeLens(CodeLensParams $params): array
     {
+        $this->logger->info(__FUNCTION__, [$params]);
+
         $text = $this->documents[$params->textDocument->uri] ?? '';
         $result = [];
 
@@ -136,12 +93,16 @@ final class Session
     #[RpcMethod(name: 'textDocument/didOpen')]
     public function onOpen(DidOpenTextDocumentParams $open): void
     {
+        $this->logger->info(__FUNCTION__, [$open]);
+
         $this->documents[$open->textDocument->uri] = $open->textDocument->text;
     }
 
     #[RpcMethod(name: 'textDocument/didChange')]
     public function onChange(DidChangeTextDocumentParams $change): void
     {
+        $this->logger->info(__FUNCTION__, [$change]);
+
         foreach ($change->contentChanges as $entry) {
             $this->documents[$change->textDocument->uri] = $entry->text;
         }
@@ -150,6 +111,8 @@ final class Session
     #[RpcMethod(name: 'textDocument/didClose')]
     public function onClose(DidCloseTextDocumentParams $data): void
     {
+        $this->logger->info(__FUNCTION__, [$data]);
+
         unset($this->documents[$data->textDocument->uri]);
     }
 }

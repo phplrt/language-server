@@ -1,4 +1,0 @@
-Phplrt\LanguageServer\Protocol\DidChangeTextDocumentParams:
-  properties:
-    contentChanges:
-      type: array<Phplrt\LanguageServer\Protocol\TextDocumentContentChangeEvent>

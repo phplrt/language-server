@@ -31,7 +31,7 @@ final class InitializeParams extends WorkDoneProgressParams
      *        client (editor or tool).
      * @param mixed $initializationOptions User provided initialization options.
      * @param TraceValues $trace The initial trace setting.
-     * @param list<WorkspaceFolder> $workspaceFolders The workspace folders
+     * @param list<WorkspaceFolder>|null $workspaceFolders The workspace folders
      *        configured in the client when the server starts.
      *
      *        This property is only available if the client supports workspace

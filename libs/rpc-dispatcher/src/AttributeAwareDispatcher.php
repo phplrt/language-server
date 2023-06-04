@@ -6,16 +6,13 @@ namespace Phplrt\RPC\Dispatcher;
 
 use Phplrt\RPC\Dispatcher\Attribute\RpcMethod;
 use Phplrt\RPC\Hydrator\ExtractorInterface;
-use Phplrt\RPC\Hydrator\Hydrator;
 use Phplrt\RPC\Hydrator\HydratorInterface;
 use Phplrt\RPC\Message\FailureResponseInterface;
 use Phplrt\RPC\Message\IdentifiableInterface;
-use Phplrt\RPC\Message\IdFactory;
 use Phplrt\RPC\Message\IdFactoryInterface;
 use Phplrt\RPC\Message\IdInterface;
 use Phplrt\RPC\Message\NotificationInterface;
 use Phplrt\RPC\Message\RequestInterface;
-use Phplrt\RPC\Message\ResponseFactory;
 use Phplrt\RPC\Message\ResponseFactoryInterface;
 use Phplrt\RPC\Message\ResponseInterface;
 
@@ -47,10 +44,10 @@ final class AttributeAwareDispatcher implements DispatcherInterface
      */
     public function __construct(
         private readonly object $context,
-        private readonly ResponseFactoryInterface $responses = new ResponseFactory(),
-        private readonly IdFactoryInterface $ids = new IdFactory(),
-        private readonly HydratorInterface $hydrator = new Hydrator(),
-        private readonly ExtractorInterface $extractor = new Hydrator(),
+        private readonly HydratorInterface $hydrator,
+        private readonly ExtractorInterface $extractor,
+        private readonly ResponseFactoryInterface $responses,
+        private readonly IdFactoryInterface $ids,
     ) {
         $reflection = new \ReflectionObject($this->context);
 

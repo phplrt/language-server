@@ -50,6 +50,10 @@ final class Extractor implements ExtractorInterface
         }
 
         if (\is_object($value)) {
+            if ($value instanceof \BackedEnum) {
+                return $value->value;
+            }
+
             return $this->object($value);
         }
 

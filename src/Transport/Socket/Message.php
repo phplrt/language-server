@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\LanguageServer\SocketServer\Connection;
+namespace Phplrt\LanguageServer\Transport\Socket;
 
 use Phplrt\RPC\Message\MessageInterface;
 
 /**
- * @internal This is an internal library class, please do not use it in your code.
- * @psalm-internal Phplrt\LanguageServer\SocketServer
+ * @internal This is an internal class, please do not use it in your application code.
+ * @psalm-internal Phplrt\LanguageServer\Transport\Socket
  */
 final class Message
 {

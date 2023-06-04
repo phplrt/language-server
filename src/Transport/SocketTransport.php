@@ -2,18 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\LanguageServer\SocketServer;
+namespace Phplrt\LanguageServer\Transport;
 
 use Evenement\EventEmitter;
+use Phplrt\LanguageServer\Transport\Socket\Connection;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 use React\Socket\ConnectionInterface;
 use React\Socket\SocketServer as ReactSocketServer;
-use Phplrt\LanguageServer\ServerInterface;
-use Phplrt\LanguageServer\SocketServer\Connection\Connection;
 
-final class SocketServer extends EventEmitter implements ServerInterface
+final class SocketTransport extends EventEmitter implements TransportInterface
 {
+    public const DEFAULT_HOST = '0.0.0.0';
+    public const DEFAULT_PORT = 5007;
+
     public const EVENT_IDE_CONNECT = 'connect';
     public const EVENT_IDE_DISCONNECT = 'disconnect';
 
@@ -28,8 +30,8 @@ final class SocketServer extends EventEmitter implements ServerInterface
      * @param LoggerInterface $logger
      */
     public function __construct(
-        string $host,
-        int $port,
+        string $host = self::DEFAULT_HOST,
+        int $port = self::DEFAULT_PORT,
         private readonly LoggerInterface $logger = new NullLogger(),
     ) {
         $this->connections = new \WeakMap();
