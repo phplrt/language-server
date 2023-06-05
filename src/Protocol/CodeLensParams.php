@@ -6,6 +6,12 @@ namespace Phplrt\LanguageServer\Protocol;
 
 use Phplrt\LanguageServer\Type\TextDocumentIdentifier;
 
+/**
+ * @deprecated NOT IMPLEMENTED YET
+ *
+ * @mixin PartialResultParams
+ * @mixin WorkDoneProgressParams
+ */
 final class CodeLensParams
 {
     /**

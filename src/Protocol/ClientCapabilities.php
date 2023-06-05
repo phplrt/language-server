@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
+use Phplrt\LanguageServer\Protocol\Notebook\NotebookDocumentClientCapabilities;
+
 /**
  * Defines the capabilities provided by the client.
  */

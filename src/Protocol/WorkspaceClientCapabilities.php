@@ -4,6 +4,12 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
+use Phplrt\LanguageServer\Protocol\Diagnostic\DiagnosticWorkspaceClientCapabilities;
+use Phplrt\LanguageServer\Protocol\FileOperation\FileOperationClientCapabilities;
+use Phplrt\LanguageServer\Protocol\InlayHint\InlayHintWorkspaceClientCapabilities;
+use Phplrt\LanguageServer\Protocol\InlineValue\InlineValueWorkspaceClientCapabilities;
+use Phplrt\LanguageServer\Protocol\SemanticTokens\SemanticTokensWorkspaceClientCapabilities;
+
 /**
  * Workspace specific client capabilities.
  */

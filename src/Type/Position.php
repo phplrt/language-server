@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Type;
 
+use Phplrt\LanguageServer\Protocol\PositionEncodingKind;
+
 /**
  * Position in a text document expressed as zero-based line and character
  * offset. Prior to 3.17 the offsets were always based on a UTF-16 string

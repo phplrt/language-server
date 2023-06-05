@@ -11,8 +11,7 @@ final class Factory implements FactoryInterface
 {
     public function __construct(
         private readonly LoggerInterface $logger = new NullLogger(),
-    ) {
-    }
+    ) {}
 
     public function create(string $dsn): TransportInterface
     {

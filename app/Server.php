@@ -12,7 +12,6 @@ use Phplrt\LanguageServer\Protocol\DidCloseTextDocumentParams;
 use Phplrt\LanguageServer\Protocol\DidOpenTextDocumentParams;
 use Phplrt\LanguageServer\Protocol\InitializeParams;
 use Phplrt\LanguageServer\Protocol\InitializeResult;
-use Phplrt\LanguageServer\Protocol\ServerCapabilities;
 use Phplrt\LanguageServer\Protocol\ServerInfo;
 use Phplrt\LanguageServer\Protocol\TextDocumentSyncKind;
 use Phplrt\LanguageServer\ServerInterface;

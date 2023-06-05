@@ -21,6 +21,5 @@ final class CodeLensWorkspaceClientCapabilities
      */
     public function __construct(
         public readonly ?bool $refreshSupport = null,
-    ) {
-    }
+    ) {}
 }

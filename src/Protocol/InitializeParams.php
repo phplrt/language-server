@@ -4,8 +4,16 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
+use Phplrt\LanguageServer\Protocol\InitializeParams\ClientInfo;
+use Phplrt\LanguageServer\Protocol\InitializeParams\TraceValues;
+use Phplrt\LanguageServer\Protocol\WorkspaceFolder\WorkspaceFoldersInitializeParams;
 use Phplrt\LanguageServer\Type\WorkspaceFolder;
 
+/**
+ * @deprecated NOT IMPLEMENTED YET
+ *
+ * @mixin WorkspaceFoldersInitializeParams
+ */
 final class InitializeParams extends WorkDoneProgressParams
 {
     /**

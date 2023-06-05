@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
+use Phplrt\LanguageServer\Protocol\RegistrationParams\Registration;
+
 /**
  * The `client/registerCapability` request is sent from the server to the client
  * to register for a new capability on the client side. Not all clients need to

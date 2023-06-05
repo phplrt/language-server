@@ -18,6 +18,5 @@ final class Message
     public function __construct(
         public readonly array $headers,
         public readonly MessageInterface $body,
-    ) {
-    }
+    ) {}
 }

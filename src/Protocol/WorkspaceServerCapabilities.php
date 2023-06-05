@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
+use Phplrt\LanguageServer\Protocol\FileOperation\FileOperationOptions;
+use Phplrt\LanguageServer\Protocol\WorkspaceFolder\WorkspaceFoldersServerCapabilities;
+
 /**
  * Workspace specific server capabilities.
  */

@@ -4,13 +4,35 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
+use Phplrt\LanguageServer\Protocol\CallHierarchy\CallHierarchyOptions;
+use Phplrt\LanguageServer\Protocol\CallHierarchy\CallHierarchyRegistrationOptions;
+use Phplrt\LanguageServer\Protocol\Declaration\DeclarationOptions;
+use Phplrt\LanguageServer\Protocol\Declaration\DeclarationRegistrationOptions;
+use Phplrt\LanguageServer\Protocol\Diagnostic\DiagnosticOptions;
+use Phplrt\LanguageServer\Protocol\Diagnostic\DiagnosticRegistrationOptions;
+use Phplrt\LanguageServer\Protocol\FoldingRange\FoldingRangeOptions;
+use Phplrt\LanguageServer\Protocol\FoldingRange\FoldingRangeRegistrationOptions;
+use Phplrt\LanguageServer\Protocol\InlayHint\InlayHintOptions;
+use Phplrt\LanguageServer\Protocol\InlayHint\InlayHintRegistrationOptions;
+use Phplrt\LanguageServer\Protocol\InlineValue\InlineValueOptions;
+use Phplrt\LanguageServer\Protocol\InlineValue\InlineValueRegistrationOptions;
+use Phplrt\LanguageServer\Protocol\LinkedEditingRange\LinkedEditingRangeOptions;
+use Phplrt\LanguageServer\Protocol\LinkedEditingRange\LinkedEditingRangeRegistrationOptions;
+use Phplrt\LanguageServer\Protocol\Moniker\MonikerOptions;
+use Phplrt\LanguageServer\Protocol\Moniker\MonikerRegistrationOptions;
+use Phplrt\LanguageServer\Protocol\Notebook\NotebookDocumentSyncOptions;
+use Phplrt\LanguageServer\Protocol\SelectionRange\SelectionRangeOptions;
+use Phplrt\LanguageServer\Protocol\SelectionRange\SelectionRangeRegistrationOptions;
+use Phplrt\LanguageServer\Protocol\SemanticTokens\SemanticTokensOptions;
+use Phplrt\LanguageServer\Protocol\SemanticTokens\SemanticTokensRegistrationOptions;
+
 /**
  * Defines the capabilities provided by a language server.
  */
 final class ServerCapabilities
 {
     public function __construct(
-        public readonly ?PositionEncodingKind $positionEncoding = null,
+        public readonly ?PositionEncodingKindInterface $positionEncoding = null,
         public readonly TextDocumentSyncOptions|TextDocumentSyncKind|null $textDocumentSync = null,
         public readonly NotebookDocumentSyncOptions|null $notebookDocumentSync = null,
         public readonly CompletionOptions|null $completionProvider = null,
@@ -32,17 +54,17 @@ final class ServerCapabilities
         public readonly DocumentRangeFormattingOptions|bool|null $documentRangeFormattingProvider = null,
         public readonly DocumentOnTypeFormattingOptions|null $documentOnTypeFormattingProvider = null,
         public readonly RenameOptions|bool|null $renameProvider = null,
-        public readonly FoldingRangeOptions|FoldingRangeRegistrationOptions|bool|null $foldingRangeProvider = null,
-        public readonly SelectionRangeOptions|SelectionRangeRegistrationOptions|bool|null $selectionRangeProvider = null,
+        public readonly FoldingRangeRegistrationOptions|FoldingRangeOptions|bool|null $foldingRangeProvider = null,
+        public readonly SelectionRangeRegistrationOptions|SelectionRangeOptions|bool|null $selectionRangeProvider = null,
         public readonly ExecuteCommandOptions|null $executeCommandProvider = null,
-        public readonly CallHierarchyOptions|CallHierarchyRegistrationOptions|bool|null $callHierarchyProvider = null,
-        public readonly LinkedEditingRangeOptions|LinkedEditingRangeRegistrationOptions|bool|null $linkedEditingRangeProvider = null,
-        public readonly SemanticTokensOptions|SemanticTokensRegistrationOptions|null $semanticTokensProvider = null,
-        public readonly MonikerOptions|MonikerRegistrationOptions|bool|null $monikerProvider = null,
-        public readonly TypeHierarchyOptions|TypeHierarchyRegistrationOptions|bool|null $typeHierarchyProvider = null,
-        public readonly InlineValueOptions|InlineValueRegistrationOptions|bool|null $inlineValueProvider = null,
-        public readonly InlayHintOptions|InlayHintRegistrationOptions|bool|null $inlayHintProvider = null,
-        public readonly DiagnosticOptions|DiagnosticRegistrationOptions|null $diagnosticProvider = null,
+        public readonly CallHierarchyRegistrationOptions|CallHierarchyOptions|bool|null $callHierarchyProvider = null,
+        public readonly LinkedEditingRangeRegistrationOptions|LinkedEditingRangeOptions|bool|null $linkedEditingRangeProvider = null,
+        public readonly SemanticTokensRegistrationOptions|SemanticTokensOptions|null $semanticTokensProvider = null,
+        public readonly MonikerRegistrationOptions|MonikerOptions|bool|null $monikerProvider = null,
+        public readonly TypeHierarchyRegistrationOptions|TypeHierarchyOptions|bool|null $typeHierarchyProvider = null,
+        public readonly InlineValueRegistrationOptions|InlineValueOptions|bool|null $inlineValueProvider = null,
+        public readonly InlayHintRegistrationOptions|InlayHintOptions|bool|null $inlayHintProvider = null,
+        public readonly DiagnosticRegistrationOptions|DiagnosticOptions|null $diagnosticProvider = null,
         public readonly WorkspaceServerCapabilities|null $workspace = null,
         public readonly mixed $experimental = null,
     ) {}

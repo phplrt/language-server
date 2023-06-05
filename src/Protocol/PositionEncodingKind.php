@@ -9,7 +9,7 @@ namespace Phplrt\LanguageServer\Protocol;
  *
  * @since 3.17.0
  */
-enum PositionEncodingKind: string
+enum PositionEncodingKind: string implements PositionEncodingKindInterface
 {
     /**
      * Character offsets count UTF-8 code units (e.g. bytes).
@@ -32,4 +32,14 @@ enum PositionEncodingKind: string
      * encoding-agnostic representation of character offsets.
      */
     case UTF32 = 'UTF32';
+
+    public static function create(string $name): PositionEncodingKindInterface
+    {
+        return self::tryFrom($name) ?? new UserPositionEncodingKind($name);
+    }
+
+    public function getEncodingName(): string
+    {
+        return $this->value;
+    }
 }
