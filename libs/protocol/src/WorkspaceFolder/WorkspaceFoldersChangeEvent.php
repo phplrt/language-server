@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol\WorkspaceFolder;
 
-use Phplrt\LanguageServer\Type\WorkspaceFolder;
+use Phplrt\LanguageServer\Protocol\Type\WorkspaceFolder;
 
 /**
  * The workspace folder change event.

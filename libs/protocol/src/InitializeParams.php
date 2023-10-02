@@ -7,7 +7,7 @@ namespace Phplrt\LanguageServer\Protocol;
 use Phplrt\LanguageServer\Protocol\InitializeParams\ClientInfo;
 use Phplrt\LanguageServer\Protocol\InitializeParams\TraceValues;
 use Phplrt\LanguageServer\Protocol\WorkspaceFolder\WorkspaceFoldersInitializeParams;
-use Phplrt\LanguageServer\Type\WorkspaceFolder;
+use Phplrt\LanguageServer\Protocol\Type\WorkspaceFolder;
 
 /**
  * @deprecated NOT IMPLEMENTED YET

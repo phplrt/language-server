@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
-use Phplrt\LanguageServer\Type\Position;
-use Phplrt\LanguageServer\Type\TextDocumentIdentifier;
+use Phplrt\LanguageServer\Protocol\Type\Position;
+use Phplrt\LanguageServer\Protocol\Type\TextDocumentIdentifier;
 
 /**
  * A parameter literal used in requests to pass a text document and a position

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol\SemanticTokens;
 
-use Phplrt\LanguageServer\Type\SemanticTokensEdit;
+use Phplrt\LanguageServer\Protocol\Type\SemanticTokensEdit;
 
 /**
  * @since 3.16.0

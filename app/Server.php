@@ -16,10 +16,10 @@ use Phplrt\LanguageServer\Protocol\ServerCapabilities;
 use Phplrt\LanguageServer\Protocol\ServerInfo;
 use Phplrt\LanguageServer\Protocol\TextDocumentSyncKind;
 use Phplrt\LanguageServer\ServerInterface;
-use Phplrt\LanguageServer\Type\CodeLens;
-use Phplrt\LanguageServer\Type\Command;
-use Phplrt\LanguageServer\Type\Position;
-use Phplrt\LanguageServer\Type\Range;
+use Phplrt\LanguageServer\Protocol\Type\CodeLens;
+use Phplrt\LanguageServer\Protocol\Type\Command;
+use Phplrt\LanguageServer\Protocol\Type\Position;
+use Phplrt\LanguageServer\Protocol\Type\Range;
 use Phplrt\RPC\Dispatcher\Attribute\RpcMethod;
 use Psr\Log\LoggerInterface;
 

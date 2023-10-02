@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
-use Phplrt\LanguageServer\Type\WorkspaceFolder;
+use Phplrt\LanguageServer\Protocol\Type\WorkspaceFolder;
 
 /**
  * A relative pattern is a helper to construct glob patterns that are matched

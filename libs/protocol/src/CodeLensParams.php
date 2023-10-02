@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
-use Phplrt\LanguageServer\Type\TextDocumentIdentifier;
+use Phplrt\LanguageServer\Protocol\Type\TextDocumentIdentifier;
 
 /**
  * @deprecated NOT IMPLEMENTED YET

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Phplrt\LanguageServer\Protocol;
 
 use JMS\Serializer\Annotation\Type;
-use Phplrt\LanguageServer\Type\VersionedTextDocumentIdentifier;
+use Phplrt\LanguageServer\Protocol\Type\VersionedTextDocumentIdentifier;
 
 /**
  * The change text document notification's parameters.

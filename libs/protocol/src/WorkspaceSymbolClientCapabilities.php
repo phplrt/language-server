@@ -7,7 +7,7 @@ namespace Phplrt\LanguageServer\Protocol;
 use Phplrt\LanguageServer\Protocol\Symbol\ResolveSupportCapabilities;
 use Phplrt\LanguageServer\Protocol\Symbol\SymbolKindCapabilities;
 use Phplrt\LanguageServer\Protocol\Symbol\TagSupportCapabilities;
-use Phplrt\LanguageServer\Type\SymbolKind;
+use Phplrt\LanguageServer\Protocol\Type\SymbolKind;
 
 /**
  * Client capabilities for a "workspace/symbol" RPC request.

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol\Symbol;
 
-use Phplrt\LanguageServer\Type\SymbolTag;
+use Phplrt\LanguageServer\Protocol\Type\SymbolTag;
 
 /**
  * The client supports tags on `SymbolInformation`. Clients supporting tags

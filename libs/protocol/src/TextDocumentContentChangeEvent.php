@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol;
 
-use Phplrt\LanguageServer\Type\Range;
+use Phplrt\LanguageServer\Protocol\Type\Range;
 
 /**
  * An event describing a change to a text document. If only a text is provided
