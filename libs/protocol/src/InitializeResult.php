@@ -13,7 +13,7 @@ final class InitializeResult
      * @param ServerCapabilities $capabilities The capabilities the language
      *        server provides.
      * @param ServerInfo|null $serverInfo Information about the server.
-     *        @since 3.15.0
+     *        - @since 3.15.0
      * @param mixed $custom Custom initialization results.
      */
     public function __construct(

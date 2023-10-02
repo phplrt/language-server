@@ -15,7 +15,7 @@ class WorkspaceFoldersInitializeParams
      *        This property is only available if the client supports workspace
      *        folders. It can be {@see null} if the client supports workspace
      *        folders but none are configured.
-     *        @since 3.6.0
+     *        - @since 3.6.0
      */
     public function __construct(
         public readonly ?array $workspaceFolders = null,

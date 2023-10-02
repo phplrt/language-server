@@ -32,32 +32,32 @@ final class WorkspaceClientCapabilities
      *        specific to the `workspace/executeCommand` request.
      * @param bool|null $workspaceFolders The client has support for workspace
      *        folders.
-     *        @since 3.6.0
+     *        - @since 3.6.0
      * @param bool|null $configuration The client supports
      *        `workspace/configuration` requests.
-     *        @since 3.6.0
+     *        - @since 3.6.0
      * @param SemanticTokensWorkspaceClientCapabilities|null $semanticTokens
      *        Capabilities specific to the semantic token requests scoped to
      *        the workspace.
-     *        @since 3.16.0
+     *        - @since 3.16.0
      * @param CodeLensWorkspaceClientCapabilities|null $codeLens Capabilities
      *        specific to the code lens requests scoped to the workspace.
-     *        @since 3.16.0
+     *        - @since 3.16.0
      * @param FileOperationClientCapabilities|null $fileOperations The client
      *        has support for file notifications/requests for user operations
      *        on files.
-     *        @since 3.16.0
+     *        - @since 3.16.0
      * @param InlineValueWorkspaceClientCapabilities|null $inlineValue
      *        Capabilities specific to the inline values requests scoped to the
      *        workspace.
-     *        @since 3.17.0
+     *        - @since 3.17.0
      * @param InlayHintWorkspaceClientCapabilities|null $inlayHint Capabilities
      *        specific to the inlay hint requests scoped to the workspace.
-     *        @since 3.17.0
+     *        - @since 3.17.0
      * @param DiagnosticWorkspaceClientCapabilities|null $diagnostics
      *        Capabilities specific to the diagnostic requests scoped to the
      *        workspace.
-     *        @since 3.17.0
+     *        - @since 3.17.0
      */
     public function __construct(
         public readonly ?bool $applyEdit = null,

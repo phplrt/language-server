@@ -18,12 +18,12 @@ final class ClientCapabilities
      *        specific client capabilities.
      * @param NotebookDocumentClientCapabilities|null $notebookDocument
      *        Capabilities specific to the notebook document support.
-     *        @since 3.17.0
+     *        - @since 3.17.0
      * @param WindowClientCapabilities|null $window Window specific client
      *        capabilities.
      * @param GeneralClientCapabilities|null $general General client
      *        capabilities.
-     *        @since 3.16.0
+     *        - @since 3.16.0
      * @param mixed $experimental Experimental client capabilities.
      */
     public function __construct(

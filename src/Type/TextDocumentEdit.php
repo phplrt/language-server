@@ -18,7 +18,7 @@ final class TextDocumentEdit
      * @param OptionalVersionedTextDocumentIdentifier $textDocument The text
      *        document to change.
      * @param list<TextEdit|AnnotatedTextEdit> $edits The edits to be applied.
-     *        @since 3.16.0 - support for {@see AnnotatedTextEdit}. This is
+     *        - @since 3.16.0 - support for {@see AnnotatedTextEdit}. This is
      *        guarded using a client capability.
      */
     public function __construct(

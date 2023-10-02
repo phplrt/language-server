@@ -172,7 +172,7 @@ final class JsonRPCv2 implements EncoderInterface, DecoderInterface
 
         // The "params" required
         if (!\array_key_exists('params', $data)) {
-            throw RequiredFieldNotDefinedException::fromField('params');
+            $data['params'] = [];
         }
 
         // The "params" must be an array or object

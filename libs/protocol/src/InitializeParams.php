@@ -29,14 +29,14 @@ final class InitializeParams extends WorkDoneProgressParams
      *
      *        Uses IETF language tags as the value's syntax:
      *        {@see https://en.wikipedia.org/wiki/IETF_language_tag}.
-     *        @since 3.16.0
+     *        - @since 3.16.0
      * @param non-empty-string|null $rootPath The {@see $rootPath} of the
      *        workspace. Is {@see null} if no folder is open.
-     *        @deprecated in favour of {@see $rootUri}.
+     *        - @deprecated in favour of {@see $rootUri}.
      * @param non-empty-string|null $rootUri The {@see $rootUri} of the workspace.
      *        Is {@see null} if no folder is open. If both {@see $rootPath} and
      *        {@see $rootUri} are set {@see $rootUri} wins.
-     *        @deprecated in favour of {@see $workspaceFolders}.
+     *        - @deprecated in favour of {@see $workspaceFolders}.
      * @param ClientCapabilities $capabilities The capabilities provided by the
      *        client (editor or tool).
      * @param mixed $initializationOptions User provided initialization options.
@@ -47,7 +47,7 @@ final class InitializeParams extends WorkDoneProgressParams
      *        This property is only available if the client supports workspace
      *        folders. It can be {@see null} if the client supports workspace
      *        folders but none are configured.
-     *        @since 3.6.0
+     *        - @since 3.6.0
      * @param int|non-empty-string|null $progressToken An optional token that a
      *        server can use to report work done progress.
      */

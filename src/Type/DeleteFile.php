@@ -16,7 +16,7 @@ final class DeleteFile extends ResourceOperation
      * @param DeleteFileOptions|null $options Delete options.
      * @param string|null $annotationId An optional annotation identifier
      *        describing the operation.
-     *        @since 3.16.0
+     *        - @since 3.16.0
      */
     public function __construct(
         public readonly string $uri,

@@ -13,7 +13,7 @@ final class DidChangeWatchedFilesClientCapabilities
      *        changes from the server side.
      * @param bool|null $relativePatternSupport Whether the client has support
      *        for relative pattern or not.
-     *        @since 3.17.0
+     *        - @since 3.17.0
      */
     public function __construct(
         public readonly ?bool $dynamicRegistration = null,

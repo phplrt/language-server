@@ -16,7 +16,7 @@ final class TypeDefinitionClientCapabilities
      *        for the corresponding server capability as well.
      * @param bool|null $linkSupport The client supports additional metadata
      *        in the form of definition links.
-     *        @since 3.14.0
+     *        - @since 3.14.0
      */
     public function __construct(
         public readonly ?bool $dynamicRegistration = null,

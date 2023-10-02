@@ -19,7 +19,7 @@ final class CompletionList
      * @param CompletionListItemDefaults|null $itemDefaults  A completion list
      *        can therefore define item defaults which will be used if a
      *        completion item itself doesn't specify the value.
-     *        @since 3.17.0
+     *        - @since 3.17.0
      * @param list<CompletionItem> $items The completion items.
      */
     public function __construct(

@@ -20,7 +20,7 @@ final class SignatureInformation
      * @param int<0, max>|null $activeParameter The index of the active
      *        parameter. If provided, this is used in place of
      *        {@see SignatureHelp::$activeParameter}.
-     *        @since 3.16.0
+     *        - @since 3.16.0
      */
     public function __construct(
         public readonly string $label,

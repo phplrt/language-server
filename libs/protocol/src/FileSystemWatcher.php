@@ -11,7 +11,7 @@ final class FileSystemWatcher
 {
     /**
      * @param RelativePattern|string $globPattern The glob pattern to watch.
-     *        @since 3.17.0 support for relative patterns.
+     *        - @since 3.17.0 support for relative patterns.
      * @param WatchKind|null $kind The kind of events of interest.
      *        If omitted it defaults to {@see WatchKind::ANY}
      */

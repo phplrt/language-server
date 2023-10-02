@@ -16,7 +16,7 @@ final class CreateFile extends ResourceOperation
      * @param CreateFileOptions|null $options Additional options
      * @param string|null $annotationId An optional annotation identifier
      *        describing the operation.
-     *        @since 3.16.0
+     *        - @since 3.16.0
      */
     public function __construct(
         public readonly string $uri,

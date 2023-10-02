@@ -17,7 +17,7 @@ final class RenameFile extends ResourceOperation
      * @param RenameFileOptions|null $options Rename options.
      * @param string|null $annotationId An optional annotation identifier
      *        describing the operation.
-     *        @since 3.16.0
+     *        - @since 3.16.0
      */
     public function __construct(
         public readonly string $oldUri,

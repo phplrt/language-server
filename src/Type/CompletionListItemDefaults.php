@@ -23,16 +23,16 @@ final class CompletionListItemDefaults
 {
     /**
      * @param list<string>|null $commitCharacters A default commit character set.
-     *        @since 3.17.0
+     *        - @since 3.17.0
      * @param Range|EditRange|null $editRange A default edit range.
-     *        @since 3.17.0
+     *        - @since 3.17.0
      * @param InsertTextFormat|null $insertTextFormat A default insert text
      *        format.
-     *        @since 3.17.0
+     *        - @since 3.17.0
      * @param InsertTextMode|null $insertTextMode A default insert text mode.
-     *        @since 3.17.0
+     *        - @since 3.17.0
      * @param mixed $data A default data value.
-     *        @since 3.17.0
+     *        - @since 3.17.0
      */
     public function __construct(
         public readonly ?array $commitCharacters = null,
