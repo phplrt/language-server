@@ -55,6 +55,12 @@ final class Server implements ServerInterface
         );
     }
 
+    #[RpcMethod(name: '$/setTrace')]
+    public function setTrace(): void
+    {
+        $this->logger->info(__FUNCTION__);
+    }
+
     #[RpcMethod]
     public function initialized(): void
     {
