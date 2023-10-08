@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\RPC\Message\Factory;
 
+use Phplrt\Contracts\RPC\Message\Factory\IdFactoryInterface;
 use Phplrt\RPC\Message\EmptyIdentifier;
 use Phplrt\Contracts\RPC\Message\IdInterface;
 use Phplrt\RPC\Message\IntIdentifier;

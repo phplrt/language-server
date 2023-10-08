@@ -13,15 +13,15 @@ use Phplrt\RPC\Protocol\Exception\RequiredFieldNotDefinedException;
 use Phplrt\RPC\Protocol\JsonRPC\Signature;
 use Phplrt\Contracts\RPC\Message\FailureResponseInterface;
 use Phplrt\RPC\Message\Factory\IdFactory;
-use Phplrt\RPC\Message\Factory\IdFactoryInterface;
+use Phplrt\Contracts\RPC\Message\Factory\IdFactoryInterface;
 use Phplrt\Contracts\RPC\Message\IdInterface;
 use Phplrt\Contracts\RPC\Message\MessageInterface;
 use Phplrt\Contracts\RPC\Message\NotificationInterface;
 use Phplrt\RPC\Message\Factory\RequestFactory;
-use Phplrt\RPC\Message\Factory\RequestFactoryInterface;
+use Phplrt\Contracts\RPC\Message\Factory\RequestFactoryInterface;
 use Phplrt\Contracts\RPC\Message\RequestInterface;
 use Phplrt\RPC\Message\Factory\ResponseFactory;
-use Phplrt\RPC\Message\Factory\ResponseFactoryInterface;
+use Phplrt\Contracts\RPC\Message\Factory\ResponseFactoryInterface;
 use Phplrt\Contracts\RPC\Message\ResponseInterface;
 use Phplrt\Contracts\RPC\Message\SuccessfulResponseInterface;
 

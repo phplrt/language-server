@@ -7,7 +7,7 @@ namespace Phplrt\RPC\Message\Factory\IdFactory;
 use Phplrt\RPC\Message\Factory\Exception\IdOverflowException;
 use Phplrt\RPC\Message\Factory\IdFactory;
 use Phplrt\RPC\Message\Factory\IdFactory\IntGenerator\OverflowBehaviour;
-use Phplrt\RPC\Message\Factory\IdFactoryInterface;
+use Phplrt\Contracts\RPC\Message\Factory\IdFactoryInterface;
 use Phplrt\Contracts\RPC\Message\IdInterface;
 
 /**

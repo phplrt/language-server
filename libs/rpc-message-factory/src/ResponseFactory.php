@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\RPC\Message\Factory;
 
+use Phplrt\Contracts\RPC\Message\Factory\ResponseFactoryInterface;
 use Phplrt\RPC\Message\FailureResponse;
 use Phplrt\Contracts\RPC\Message\FailureResponseInterface as Failure;
 use Phplrt\Contracts\RPC\Message\IdInterface as Id;

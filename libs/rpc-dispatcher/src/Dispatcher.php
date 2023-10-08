@@ -8,11 +8,11 @@ use Phplrt\RPC\Hydrator\ExtractorInterface;
 use Phplrt\RPC\Hydrator\HydratorInterface;
 use Phplrt\Contracts\RPC\Message\FailureResponseInterface;
 use Phplrt\Contracts\RPC\Message\IdentifiableInterface;
-use Phplrt\RPC\Message\Factory\IdFactoryInterface;
+use Phplrt\Contracts\RPC\Message\Factory\IdFactoryInterface;
 use Phplrt\Contracts\RPC\Message\IdInterface;
 use Phplrt\Contracts\RPC\Message\NotificationInterface;
 use Phplrt\Contracts\RPC\Message\RequestInterface;
-use Phplrt\RPC\Message\Factory\ResponseFactoryInterface;
+use Phplrt\Contracts\RPC\Message\Factory\ResponseFactoryInterface;
 use Phplrt\Contracts\RPC\Message\ResponseInterface;
 
 final class Dispatcher implements DispatcherInterface

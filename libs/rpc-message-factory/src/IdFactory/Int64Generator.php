@@ -7,7 +7,7 @@ namespace Phplrt\RPC\Message\Factory\IdFactory;
 use Phplrt\RPC\Message\Factory\Exception\IdNotSupportedException;
 use Phplrt\RPC\Message\Factory\IdFactory;
 use Phplrt\RPC\Message\Factory\IdFactory\IntGenerator\OverflowBehaviour;
-use Phplrt\RPC\Message\Factory\IdFactoryInterface;
+use Phplrt\Contracts\RPC\Message\Factory\IdFactoryInterface;
 
 /**
  * @template-extends IntGenerator<int<0, 9223372036854775807>>

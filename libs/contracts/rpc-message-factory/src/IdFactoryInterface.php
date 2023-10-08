@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\RPC\Message\Factory;
+namespace Phplrt\Contracts\RPC\Message\Factory;
 
 use Phplrt\Contracts\RPC\Message\IdInterface;
 

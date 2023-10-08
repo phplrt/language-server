@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\RPC\Message\Factory;
 
+use Phplrt\Contracts\RPC\Message\Factory\RequestFactoryInterface;
 use Phplrt\RPC\Message\Factory\Exception\IdExceptionInterface;
 use Phplrt\RPC\Message\Factory\IdFactory\GeneratorInterface;
 use Phplrt\RPC\Message\Factory\IdFactory\Int32Generator;

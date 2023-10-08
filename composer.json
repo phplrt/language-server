@@ -3,6 +3,7 @@
     "type": "library",
     "repositories": [
         {"type": "path", "url": "libs/contracts/rpc-message"},
+        {"type": "path", "url": "libs/contracts/rpc-message-factory"},
         {"type": "path", "url": "libs/lsp-protocol"},
         {"type": "path", "url": "libs/rpc-dispatcher"},
         {"type": "path", "url": "libs/rpc-hydrator"},
@@ -19,6 +20,7 @@
         "phplrt/rpc-hydrator": "*",
         "phplrt/rpc-message-contracts": "*",
         "phplrt/rpc-message": "*",
+        "phplrt/rpc-message-factory-contracts": "*",
         "phplrt/rpc-message-factory": "*",
         "phplrt/rpc-protocol": "*",
         "react/socket": "^1.14",
