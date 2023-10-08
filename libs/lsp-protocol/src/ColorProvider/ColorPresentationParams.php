@@ -8,7 +8,7 @@ use Phplrt\LanguageServer\Protocol\PartialResultParams;
 use Phplrt\LanguageServer\Protocol\PartialResultParamsProvider;
 use Phplrt\LanguageServer\Protocol\Type\Color;
 use Phplrt\LanguageServer\Protocol\Type\Range;
-use Phplrt\LanguageServer\Protocol\Type\TextDocumentIdentifier;
+use Phplrt\LanguageServer\Protocol\TextDocument\TextDocumentIdentifier;
 use Phplrt\LanguageServer\Protocol\WorkDoneProgressParams;
 use Phplrt\LanguageServer\Protocol\WorkDoneProgressParamsProvider;
 

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Phplrt\LanguageServer\Protocol\InlineValue;
 
 use Phplrt\LanguageServer\Protocol\Type\Range;
-use Phplrt\LanguageServer\Protocol\Type\TextDocumentIdentifier;
+use Phplrt\LanguageServer\Protocol\TextDocument\TextDocumentIdentifier;
 use Phplrt\LanguageServer\Protocol\Type\InlineValueContext;
 use Phplrt\LanguageServer\Protocol\WorkDoneProgressParams;
 use Phplrt\LanguageServer\Protocol\WorkDoneProgressParamsProvider;

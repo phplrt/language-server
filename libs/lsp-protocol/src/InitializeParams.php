@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Phplrt\LanguageServer\Protocol;
 
 use Phplrt\LanguageServer\Protocol\InitializeParams\InitializeParamsClientInfo;
-use Phplrt\LanguageServer\Protocol\Unstable\TraceValues;
+use Phplrt\LanguageServer\Protocol\Experimental\TraceValues;
 use Phplrt\LanguageServer\Protocol\Type\WorkspaceFolder;
 use Phplrt\LanguageServer\Protocol\WorkspaceFolder\WorkspaceFoldersInitializeParams;
 

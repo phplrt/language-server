@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol\Notebook;
 
-use Phplrt\LanguageServer\Protocol\Type\TextDocumentIdentifier;
+use Phplrt\LanguageServer\Protocol\TextDocument\TextDocumentIdentifier;
 
 /**
  * The params sent in a close notebook document notification.

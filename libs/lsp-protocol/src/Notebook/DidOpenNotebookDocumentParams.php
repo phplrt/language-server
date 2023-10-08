@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol\Notebook;
 
-use Phplrt\LanguageServer\Protocol\Type\TextDocumentItem;
+use Phplrt\LanguageServer\Protocol\TextDocument\TextDocumentItem;
 
 /**
  * The params sent in an open notebook document notification.

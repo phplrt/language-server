@@ -6,7 +6,7 @@ namespace Phplrt\LanguageServer\Protocol\TypeHierarchy;
 
 use Phplrt\LanguageServer\Protocol\PartialResultParams;
 use Phplrt\LanguageServer\Protocol\PartialResultParamsProvider;
-use Phplrt\LanguageServer\Protocol\Type\TypeHierarchyItem;
+use Phplrt\LanguageServer\Protocol\TypeHierarchy\TypeHierarchyItem;
 use Phplrt\LanguageServer\Protocol\WorkDoneProgressParams;
 use Phplrt\LanguageServer\Protocol\WorkDoneProgressParamsProvider;
 

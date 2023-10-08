@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol\TextDocument;
 
-use Phplrt\LanguageServer\Protocol\Type\TextDocumentIdentifier;
+use Phplrt\LanguageServer\Protocol\TextDocument\TextDocumentIdentifier;
 
 /**
  * The parameters sent in a close text document notification

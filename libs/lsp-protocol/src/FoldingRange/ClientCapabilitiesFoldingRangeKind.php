@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol\FoldingRange;
 
-use Phplrt\LanguageServer\Protocol\Type\FoldingRangeKind;
+use Phplrt\LanguageServer\Protocol\FoldingRange\FoldingRangeKind;
 
 final class ClientCapabilitiesFoldingRangeKind
 {

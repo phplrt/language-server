@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Protocol\TextDocument;
 
-use Phplrt\LanguageServer\Protocol\Type\TextDocumentItem;
+use Phplrt\LanguageServer\Protocol\TextDocument\TextDocumentItem;
 
 /**
  * The parameters sent in an open text document notification
