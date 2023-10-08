@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Phplrt\RPC\Dispatcher;
 
-use Phplrt\RPC\Hydrator\ExtractorInterface;
-use Phplrt\RPC\Hydrator\HydratorInterface;
+use Phplrt\Contracts\RPC\Hydrator\ExtractorInterface;
+use Phplrt\Contracts\RPC\Hydrator\HydratorInterface;
 use Phplrt\Contracts\RPC\Message\FailureResponseInterface;
 use Phplrt\Contracts\RPC\Message\IdentifiableInterface;
 use Phplrt\Contracts\RPC\Message\Factory\IdFactoryInterface;

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Phplrt\RPC\Hydrator;
 
+use Phplrt\Contracts\RPC\Hydrator\ExtractorInterface;
+
 final class Extractor implements ExtractorInterface
 {
     public function __construct(

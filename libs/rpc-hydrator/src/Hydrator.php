@@ -7,6 +7,7 @@ namespace Phplrt\RPC\Hydrator;
 use Cache\Adapter\PHPArray\ArrayCachePool;
 use CuyZ\Valinor\Mapper\TreeMapper;
 use CuyZ\Valinor\MapperBuilder;
+use Phplrt\Contracts\RPC\Hydrator\HydratorInterface;
 
 final class Hydrator implements HydratorInterface
 {

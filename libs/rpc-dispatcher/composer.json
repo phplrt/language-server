@@ -17,9 +17,9 @@
     ],
     "require": {
         "php": "^8.1",
-        "phplrt/rpc-hydrator": "*",
-        "phplrt/rpc-message": "*",
-        "phplrt/rpc-message-factory": "*"
+        "phplrt/rpc-hydrator": "^1.0",
+        "phplrt/rpc-message": "^1.0",
+        "phplrt/rpc-message-factory": "^1.0"
     },
     "autoload": {
         "psr-4": {

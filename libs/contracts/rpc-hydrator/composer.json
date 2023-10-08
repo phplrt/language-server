@@ -1,9 +1,9 @@
 {
-    "name": "phplrt/rpc-message-factory-contracts",
+    "name": "phplrt/rpc-hydrator-contracts",
     "type": "library",
-    "description": "RPC message factory contracts",
+    "description": "RPC hydrator contracts",
     "license": "MIT",
-    "keywords": ["rpc", "message", "factory", "interfaces", "interoperability", "php", "lsp"],
+    "keywords": ["rpc", "hydrator", "mapping", "interfaces", "interoperability", "php", "lsp"],
     "homepage": "https://github.com/phplrt",
     "support": {
         "issues": "https://github.com/phplrt/phplrt/issues",
@@ -16,12 +16,11 @@
         }
     ],
     "require": {
-        "php": "^8.1",
-        "phplrt/rpc-message-contracts": "^1.0"
+        "php": "^8.1"
     },
     "autoload": {
         "psr-4": {
-            "Phplrt\\Contracts\\RPC\\Message\\Factory\\": "src"
+            "Phplrt\\Contracts\\RPC\\Hydrator\\": "src"
         }
     },
     "require-dev": {

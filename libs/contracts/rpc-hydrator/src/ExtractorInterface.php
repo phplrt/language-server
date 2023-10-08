@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\RPC\Hydrator;
+namespace Phplrt\Contracts\RPC\Hydrator;
 
 interface ExtractorInterface
 {
