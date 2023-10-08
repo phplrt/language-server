@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Phplrt\RPC\Message\Factory\IdFactory;
 
 use Phplrt\RPC\Message\Factory\Exception\IdExceptionInterface;
-use Phplrt\RPC\Message\IdInterface;
+use Phplrt\Contracts\RPC\Message\IdInterface;
 
 interface GeneratorInterface
 {

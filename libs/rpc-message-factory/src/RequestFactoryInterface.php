@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Phplrt\RPC\Message\Factory;
 
-use Phplrt\RPC\Message\IdInterface;
-use Phplrt\RPC\Message\NotificationInterface;
-use Phplrt\RPC\Message\RequestInterface;
+use Phplrt\Contracts\RPC\Message\IdInterface;
+use Phplrt\Contracts\RPC\Message\NotificationInterface;
+use Phplrt\Contracts\RPC\Message\RequestInterface;
 
 interface RequestFactoryInterface
 {

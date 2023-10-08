@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\RPC\Message;
+namespace Phplrt\Contracts\RPC\Message;
 
 /**
  * A {@see NotificationInterface} is a {@see RequestInterface} object without

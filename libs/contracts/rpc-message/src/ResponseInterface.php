@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\RPC\Message;
+namespace Phplrt\Contracts\RPC\Message;
 
 /**
  * When the RPC call is made, the Server MUST reply with

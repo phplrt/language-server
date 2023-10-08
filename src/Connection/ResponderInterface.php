@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Phplrt\LanguageServer\Connection;
 
-use Phplrt\RPC\Message\FailureResponseInterface;
-use Phplrt\RPC\Message\SuccessfulResponseInterface;
+use Phplrt\Contracts\RPC\Message\FailureResponseInterface;
+use Phplrt\Contracts\RPC\Message\SuccessfulResponseInterface;
 
 interface ResponderInterface
 {

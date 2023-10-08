@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Phplrt\RPC\Message;
 
+use Phplrt\Contracts\RPC\Message\FailureResponseInterface;
+use Phplrt\Contracts\RPC\Message\IdInterface;
+
 class FailureResponse extends Response implements FailureResponseInterface
 {
     public function __construct(

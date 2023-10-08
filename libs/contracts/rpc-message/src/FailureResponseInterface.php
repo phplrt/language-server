@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\RPC\Message;
+namespace Phplrt\Contracts\RPC\Message;
 
 /**
  * When RPC call encounters an error, the {@see ResponseInterface} object MUST

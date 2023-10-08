@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Phplrt\RPC\Message;
 
+use Phplrt\Contracts\RPC\Message\NotificationInterface;
+
 class Notification implements NotificationInterface
 {
     /**

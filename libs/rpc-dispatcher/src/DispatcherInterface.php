@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Phplrt\RPC\Dispatcher;
 
-use Phplrt\RPC\Message\FailureResponseInterface;
-use Phplrt\RPC\Message\NotificationInterface;
-use Phplrt\RPC\Message\RequestInterface;
-use Phplrt\RPC\Message\ResponseInterface;
+use Phplrt\Contracts\RPC\Message\FailureResponseInterface;
+use Phplrt\Contracts\RPC\Message\NotificationInterface;
+use Phplrt\Contracts\RPC\Message\RequestInterface;
+use Phplrt\Contracts\RPC\Message\ResponseInterface;
 
 interface DispatcherInterface
 {

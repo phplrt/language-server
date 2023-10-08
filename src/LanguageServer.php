@@ -14,14 +14,14 @@ use Phplrt\RPC\Hydrator\Extractor;
 use Phplrt\RPC\Hydrator\ExtractorInterface;
 use Phplrt\RPC\Hydrator\Hydrator;
 use Phplrt\RPC\Hydrator\HydratorInterface;
-use Phplrt\RPC\Message\FailureResponseInterface;
+use Phplrt\Contracts\RPC\Message\FailureResponseInterface;
 use Phplrt\RPC\Message\Factory\IdFactory;
 use Phplrt\RPC\Message\Factory\IdFactoryInterface;
-use Phplrt\RPC\Message\NotificationInterface;
-use Phplrt\RPC\Message\RequestInterface;
+use Phplrt\Contracts\RPC\Message\NotificationInterface;
+use Phplrt\Contracts\RPC\Message\RequestInterface;
 use Phplrt\RPC\Message\Factory\ResponseFactory;
 use Phplrt\RPC\Message\Factory\ResponseFactoryInterface;
-use Phplrt\RPC\Message\SuccessfulResponseInterface;
+use Phplrt\Contracts\RPC\Message\SuccessfulResponseInterface;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 

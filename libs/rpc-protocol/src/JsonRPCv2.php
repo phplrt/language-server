@@ -11,19 +11,19 @@ use Phplrt\RPC\Protocol\Exception\InvalidFieldTypeException;
 use Phplrt\RPC\Protocol\Exception\InvalidFieldValueException;
 use Phplrt\RPC\Protocol\Exception\RequiredFieldNotDefinedException;
 use Phplrt\RPC\Protocol\JsonRPC\Signature;
-use Phplrt\RPC\Message\FailureResponseInterface;
+use Phplrt\Contracts\RPC\Message\FailureResponseInterface;
 use Phplrt\RPC\Message\Factory\IdFactory;
 use Phplrt\RPC\Message\Factory\IdFactoryInterface;
-use Phplrt\RPC\Message\IdInterface;
-use Phplrt\RPC\Message\MessageInterface;
-use Phplrt\RPC\Message\NotificationInterface;
+use Phplrt\Contracts\RPC\Message\IdInterface;
+use Phplrt\Contracts\RPC\Message\MessageInterface;
+use Phplrt\Contracts\RPC\Message\NotificationInterface;
 use Phplrt\RPC\Message\Factory\RequestFactory;
 use Phplrt\RPC\Message\Factory\RequestFactoryInterface;
-use Phplrt\RPC\Message\RequestInterface;
+use Phplrt\Contracts\RPC\Message\RequestInterface;
 use Phplrt\RPC\Message\Factory\ResponseFactory;
 use Phplrt\RPC\Message\Factory\ResponseFactoryInterface;
-use Phplrt\RPC\Message\ResponseInterface;
-use Phplrt\RPC\Message\SuccessfulResponseInterface;
+use Phplrt\Contracts\RPC\Message\ResponseInterface;
+use Phplrt\Contracts\RPC\Message\SuccessfulResponseInterface;
 
 final class JsonRPCv2 implements EncoderInterface, DecoderInterface
 {

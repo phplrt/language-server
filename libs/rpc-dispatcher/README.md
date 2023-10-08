@@ -2,9 +2,9 @@
     <a href="https://phplrt.org"><img src="https://avatars2.githubusercontent.com/u/49816277?s=128" width="128" alt="Phplrt" /></a>
 </p>
 
-## RPC Protocol
+## RPC Dispatcher
 
-An implementation of RPC message dispatcher.
+This is a subtree split of the phplrt RPC dispatcher component.
 
 ### Resources
 

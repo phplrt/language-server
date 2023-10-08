@@ -1,7 +1,7 @@
 {
-    "name": "phplrt/rpc-message",
+    "name": "phplrt/rpc-message-contracts",
     "type": "library",
-    "description": "An implementation for RPC messages",
+    "description": "RPC message contracts",
     "license": "MIT",
     "keywords": ["rpc", "message", "interfaces", "interoperability", "php", "lsp"],
     "homepage": "https://github.com/phplrt",
@@ -16,26 +16,15 @@
         }
     ],
     "require": {
-        "php": "^8.1",
-        "phplrt/rpc-message-contracts": "*"
+        "php": "^8.1"
     },
     "autoload": {
         "psr-4": {
-            "Phplrt\\RPC\\Message\\": "src"
+            "Phplrt\\Contracts\\RPC\\Message\\": "src"
         }
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.34",
-        "phpunit/phpunit": "^10.3",
         "vimeo/psalm": "^5.15"
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Phplrt\\RPC\\Message\\Tests\\": "tests"
-        }
-    },
-    "provide": {
-        "phplrt/rpc-message-contracts-implementation": "^1.0"
     },
     "extra": {
         "branch-alias": {

@@ -2,6 +2,7 @@
     "name": "phplrt/lsp",
     "type": "library",
     "repositories": [
+        {"type": "path", "url": "libs/contracts/rpc-message"},
         {"type": "path", "url": "libs/lsp-protocol"},
         {"type": "path", "url": "libs/rpc-dispatcher"},
         {"type": "path", "url": "libs/rpc-hydrator"},
@@ -16,6 +17,7 @@
         "phplrt/lsp-protocol": "*",
         "phplrt/rpc-dispatcher": "*",
         "phplrt/rpc-hydrator": "*",
+        "phplrt/rpc-message-contracts": "*",
         "phplrt/rpc-message": "*",
         "phplrt/rpc-message-factory": "*",
         "phplrt/rpc-protocol": "*",

@@ -4,7 +4,7 @@
 
 ## RPC Protocol
 
-An implementation of the RPC protocol codecs.
+This is a subtree split of the phplrt RPC protocol component.
 
 ### Resources
 

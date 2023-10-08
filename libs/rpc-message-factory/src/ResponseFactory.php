@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Phplrt\RPC\Message\Factory;
 
 use Phplrt\RPC\Message\FailureResponse;
-use Phplrt\RPC\Message\FailureResponseInterface as Failure;
-use Phplrt\RPC\Message\IdInterface as Id;
-use Phplrt\RPC\Message\RequestInterface;
+use Phplrt\Contracts\RPC\Message\FailureResponseInterface as Failure;
+use Phplrt\Contracts\RPC\Message\IdInterface as Id;
+use Phplrt\Contracts\RPC\Message\RequestInterface;
 use Phplrt\RPC\Message\SuccessfulResponse;
-use Phplrt\RPC\Message\SuccessfulResponseInterface as Success;
+use Phplrt\Contracts\RPC\Message\SuccessfulResponseInterface as Success;
 
 final class ResponseFactory implements ResponseFactoryInterface
 {

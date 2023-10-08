@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\RPC\Message\Factory;
 
-use Phplrt\RPC\Message\IdInterface;
+use Phplrt\Contracts\RPC\Message\IdInterface;
 
 interface IdFactoryInterface
 {
