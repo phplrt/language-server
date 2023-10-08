@@ -13,6 +13,16 @@
         <DeprecatedClass errorLevel="suppress" />
     </issueHandlers>
     <projectFiles>
+        <directory name="libs/contracts/rpc-hydrator/src" />
+        <directory name="libs/contracts/rpc-message/src" />
+        <directory name="libs/contracts/rpc-message-factory/src" />
+        <directory name="libs/contracts/rpc-protocol/src" />
+        <directory name="libs/lsp-protocol/src" />
+        <directory name="libs/rpc-dispatcher/src" />
+        <directory name="libs/rpc-hydrator/src" />
+        <directory name="libs/rpc-message/src" />
+        <directory name="libs/rpc-message-factory/src" />
+        <directory name="libs/rpc-protocol-jsonrpc/src" />
         <ignoreFiles>
             <directory name="vendor" />
         </ignoreFiles>

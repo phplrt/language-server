@@ -1,28 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
-         backupGlobals="true"
-         backupStaticAttributes="false"
-         bootstrap="vendor/autoload.php"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.4/phpunit.xsd"
+         backupGlobals="false"
          colors="true"
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true"
-         processIsolation="false"
-         stopOnFailure="false"
+         cacheDirectory="vendor/.phpunit.cache"
 >
-    <coverage>
-        <include>
-            <directory suffix=".php">src</directory>
-        </include>
-    </coverage>
-    <testsuites>
-        <testsuite name="Test Case">
-            <directory suffix="TestCase.php">tests</directory>
-        </testsuite>
-    </testsuites>
     <php>
-        <ini name="error_reporting" value="-1"/>
+        <ini name="display_errors" value="1" />
+        <ini name="error_reporting" value="-1" />
         <ini name="memory_limit" value="-1"/>
     </php>
+
+    <testsuites>
+        <testsuite name="phplrt/lsp-protocol">
+            <directory suffix="TestCase.php">libs/lsp-protocol/tests</directory>
+        </testsuite>
+        <testsuite name="phplrt/rpc-dispatcher">
+            <directory suffix="TestCase.php">libs/rpc-dispatcher/tests</directory>
+        </testsuite>
+        <testsuite name="phplrt/rpc-hydrator">
+            <directory suffix="TestCase.php">libs/rpc-hydrator/tests</directory>
+        </testsuite>
+        <testsuite name="phplrt/rpc-message">
+            <directory suffix="TestCase.php">libs/rpc-message/tests</directory>
+        </testsuite>
+        <testsuite name="phplrt/rpc-message-factory">
+            <directory suffix="TestCase.php">libs/rpc-message-factory/tests</directory>
+        </testsuite>
+        <testsuite name="phplrt/rpc-protocol-jsonrpc">
+            <directory suffix="TestCase.php">libs/rpc-protocol-jsonrpc/tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage />
+
+    <source>
+        <include>
+            <directory suffix=".php">libs/lsp-protocol/src</directory>
+            <directory suffix=".php">libs/lsp-dispatcher/src</directory>
+            <directory suffix=".php">libs/lsp-hydrator/src</directory>
+            <directory suffix=".php">libs/lsp-message/src</directory>
+            <directory suffix=".php">libs/lsp-message-factory/src</directory>
+            <directory suffix=".php">libs/lsp-protocol-jsonrpc/src</directory>
+        </include>
+    </source>
 </phpunit>

@@ -10,7 +10,7 @@
         {"type": "path", "url": "libs/rpc-hydrator"},
         {"type": "path", "url": "libs/rpc-message"},
         {"type": "path", "url": "libs/rpc-message-factory"},
-        {"type": "path", "url": "libs/rpc-protocol"}
+        {"type": "path", "url": "libs/rpc-protocol-jsonrpc"}
     ],
     "require": {
         "php": "^8.1",
@@ -24,7 +24,7 @@
         "phplrt/rpc-message": "^1.0",
         "phplrt/rpc-message-factory-contracts": "^1.0",
         "phplrt/rpc-message-factory": "^1.0",
-        "phplrt/rpc-protocol": "^1.0",
+        "phplrt/rpc-protocol-jsonrpc": "^1.0",
         "react/socket": "^1.14",
         "symfony/yaml": "^5.4|^6.0"
     },
@@ -37,7 +37,7 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.34",
         "monolog/monolog": "^3.3",
-        "phpunit/phpunit": "^10.3",
+        "phpunit/phpunit": "^10.4",
         "symfony/var-dumper": "^5.4|^6.0",
         "vimeo/psalm": "^5.15"
     },
@@ -58,8 +58,8 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.x-dev",
-            "dev-main": "1.x-dev"
+            "dev-master": "1.0.x-dev",
+            "dev-main": "1.0.x-dev"
         }
     },
     "config": {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\RPC\Protocol\Exception;
+namespace Phplrt\Contracts\RPC\Protocol\Exception;
 
 interface ExceptionInterface extends \Throwable
 {

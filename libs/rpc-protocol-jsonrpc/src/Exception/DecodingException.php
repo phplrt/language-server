@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Phplrt\RPC\Protocol\Exception;
 
+use Phplrt\Contracts\RPC\Protocol\Exception\DecodingExceptionInterface;
+
 class DecodingException extends \RuntimeException implements DecodingExceptionInterface
 {
     final public const CODE_DECODING = 0x01;

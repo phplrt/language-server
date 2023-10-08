@@ -1,9 +1,9 @@
 {
-    "name": "phplrt/rpc-message-factory",
+    "name": "phplrt/rpc-protocol-contracts",
     "type": "library",
-    "description": "An implementation for RPC message factories",
+    "description": "RPC protocol contracts",
     "license": "MIT",
-    "keywords": ["rpc", "contracts", "factory", "message", "interfaces", "interoperability", "php", "lsp"],
+    "keywords": ["rpc", "protocol", "codec", "encoder", "decoder", "interoperability", "php", "lsp"],
     "homepage": "https://github.com/phplrt",
     "support": {
         "issues": "https://github.com/phplrt/phplrt/issues",
@@ -16,27 +16,15 @@
         }
     ],
     "require": {
-        "php": "^8.1",
-        "phplrt/rpc-message-factory-contracts": "^1.0",
-        "phplrt/rpc-message": "^1.0"
+        "php": "^8.1"
     },
     "autoload": {
         "psr-4": {
-            "Phplrt\\RPC\\Message\\Factory\\": "src"
+            "Phplrt\\Contracts\\RPC\\Protocol\\": "src"
         }
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.34",
-        "phpunit/phpunit": "^10.4",
         "vimeo/psalm": "^5.15"
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Phplrt\\RPC\\Message\\Factory\\Tests\\": "tests"
-        }
-    },
-    "provide": {
-        "phplrt/rpc-message-factory-contracts-implementation": "^1.0"
     },
     "extra": {
         "branch-alias": {

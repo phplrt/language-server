@@ -1,9 +1,9 @@
 {
-    "name": "phplrt/rpc-protocol",
+    "name": "phplrt/rpc-protocol-jsonrpc",
     "type": "library",
-    "description": "An implementation of the RPC protocol codecs",
+    "description": "An implementation of the JSON-RPC protocol",
     "license": "MIT",
-    "keywords": ["rpc", "encoder", "decoder", "contracts", "interoperability", "standards", "php", "lsp"],
+    "keywords": ["rpc", "encoder", "decoder", "json-rpc", "json", "standards", "php", "lsp"],
     "homepage": "https://github.com/phplrt",
     "support": {
         "issues": "https://github.com/phplrt/phplrt/issues",
@@ -18,6 +18,7 @@
     "require": {
         "php": "^8.1",
         "ext-json": "*",
+        "phplrt/rpc-protocol-contracts": "^1.0",
         "phplrt/rpc-hydrator": "^1.0",
         "phplrt/rpc-message": "^1.0",
         "phplrt/rpc-message-factory": "^1.0"
@@ -29,7 +30,7 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.34",
-        "phpunit/phpunit": "^10.3",
+        "phpunit/phpunit": "^10.4",
         "vimeo/psalm": "^5.15"
     },
     "autoload-dev": {
@@ -37,10 +38,13 @@
             "Phplrt\\RPC\\Protocol\\Tests\\": "tests"
         }
     },
+    "provide": {
+        "phplrt/rpc-protocol-contracts-implementation": "^1.0"
+    },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.x-dev",
-            "dev-main": "1.x-dev"
+            "dev-master": "1.0.x-dev",
+            "dev-main": "1.0.x-dev"
         }
     },
     "config": {

@@ -6,8 +6,8 @@ namespace Phplrt\LanguageServer\Transport\Socket;
 
 use Evenement\EventEmitter;
 use Phplrt\LanguageServer\Connection\ConnectionInterface;
-use Phplrt\RPC\Protocol\DecoderInterface;
-use Phplrt\RPC\Protocol\EncoderInterface;
+use Phplrt\Contracts\RPC\Protocol\DecoderInterface;
+use Phplrt\Contracts\RPC\Protocol\EncoderInterface;
 use Phplrt\RPC\Protocol\JsonRPCv2;
 use Phplrt\Contracts\RPC\Message\FailureResponseInterface;
 use Phplrt\Contracts\RPC\Message\NotificationInterface;

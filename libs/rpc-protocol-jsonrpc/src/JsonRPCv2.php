@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace Phplrt\RPC\Protocol;
 
+use Phplrt\Contracts\RPC\Protocol\DecoderInterface;
+use Phplrt\Contracts\RPC\Protocol\EncoderInterface;
 use Phplrt\RPC\Protocol\Exception\DecodingException;
-use Phplrt\RPC\Protocol\Exception\DecodingExceptionInterface;
+use Phplrt\Contracts\RPC\Protocol\Exception\DecodingExceptionInterface;
 use Phplrt\RPC\Protocol\Exception\EncodingException;
 use Phplrt\RPC\Protocol\Exception\InvalidFieldTypeException;
 use Phplrt\RPC\Protocol\Exception\InvalidFieldValueException;
