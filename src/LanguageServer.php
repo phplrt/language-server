@@ -7,7 +7,8 @@ namespace Phplrt\LanguageServer;
 use Phplrt\LanguageServer\Connection\ConnectionInterface;
 use Phplrt\LanguageServer\Transport\Factory;
 use Phplrt\LanguageServer\Transport\FactoryInterface;
-use Phplrt\RPC\Dispatcher\AttributeAwareDispatcher;
+use Phplrt\RPC\Dispatcher\AttributeReader;
+use Phplrt\RPC\Dispatcher\Dispatcher;
 use Phplrt\RPC\Dispatcher\DispatcherInterface;
 use Phplrt\RPC\Hydrator\Extractor;
 use Phplrt\RPC\Hydrator\ExtractorInterface;
@@ -61,8 +62,8 @@ final class LanguageServer
 
     private function createSession(ConnectionInterface $connection, ServerInterface $server): DispatcherInterface
     {
-        $dispatcher = new AttributeAwareDispatcher(
-            context: $server,
+        $dispatcher = new Dispatcher(
+            methods: new AttributeReader($server),
             hydrator: $this->hydrator,
             extractor: $this->extractor,
             responses: $this->responses,
@@ -72,7 +73,7 @@ final class LanguageServer
         $connection->onRequest(function (RequestInterface $request) use ($connection, $dispatcher): void {
             $this->logger->info(' -> call [' . $request->getId() . '] ' . $request->getMethod());
 
-            $response = $dispatcher->dispatchMethod($request);
+            $response = $dispatcher->dispatch($request);
 
             if ($response instanceof SuccessfulResponseInterface) {
                 $connection->success($response);
@@ -88,7 +89,7 @@ final class LanguageServer
         $connection->onNotification(function (NotificationInterface $notice) use ($connection, $dispatcher): void {
             $this->logger->info(' -> notify ' . $notice->getMethod());
 
-            $response = $dispatcher->dispatchProcedure($notice);
+            $response = $dispatcher->dispatch($notice);
 
             if ($response instanceof FailureResponseInterface) {
                 $connection->error($response);

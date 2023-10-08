@@ -12,14 +12,15 @@ use Phplrt\RPC\Message\ResponseInterface;
 interface DispatcherInterface
 {
     /**
-     * @param RequestInterface $request
+     * Dispatch RPC method.
      *
-     * @return ResponseInterface
+     * @return ($request is RequestInterface ? ResponseInterface : (FailureResponseInterface|null))
      */
-    public function dispatchMethod(RequestInterface $request): ResponseInterface;
+    public function dispatch(NotificationInterface $request): ?ResponseInterface;
 
     /**
-     * @param NotificationInterface $notification
+     * Returns {@see true} in case of given method is available
+     * or {@see false} instead.
      */
-    public function dispatchProcedure(NotificationInterface $notification): ?FailureResponseInterface;
+    public function has(NotificationInterface $request): bool;
 }
