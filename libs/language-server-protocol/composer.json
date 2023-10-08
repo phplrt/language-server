@@ -1,5 +1,5 @@
 {
-    "name": "phplrt/lsp-protocol",
+    "name": "phplrt/language-server-protocol",
     "type": "library",
     "description": "The Language Service Protocol data-types",
     "license": "MIT",
