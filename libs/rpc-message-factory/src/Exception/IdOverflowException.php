@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\RPC\Message\Exception;
+namespace Phplrt\RPC\Message\Factory\Exception;
 
 class IdOverflowException extends IdException
 {

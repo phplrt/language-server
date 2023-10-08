@@ -1,5 +1,20 @@
 {
     "name": "phplrt/rpc-protocol",
+    "type": "library",
+    "description": "An implementation of the RPC protocol codecs",
+    "license": "MIT",
+    "keywords": ["rpc", "encoder", "decoder", "contracts", "interoperability", "standards", "php", "lsp"],
+    "homepage": "https://github.com/phplrt",
+    "support": {
+        "issues": "https://github.com/phplrt/phplrt/issues",
+        "source": "https://github.com/phplrt/language-server"
+    },
+    "authors": [
+        {
+            "name": "Kirill Nesmeyanov",
+            "email": "nesk@xakep.ru"
+        }
+    ],
     "require": {
         "php": "^8.1",
         "ext-json": "*",
@@ -11,6 +26,25 @@
         "psr-4": {
             "Phplrt\\RPC\\Protocol\\": "src"
         }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.34",
+        "phpunit/phpunit": "^10.3",
+        "vimeo/psalm": "^5.15"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Phplrt\\RPC\\Protocol\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev",
+            "dev-main": "1.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
     },
     "minimum-stability": "dev",
     "prefer-stable": true

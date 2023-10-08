@@ -2,7 +2,6 @@
     "name": "phplrt/lsp",
     "type": "library",
     "repositories": [
-        {"type": "path", "url": "libs/lsp-code-generator"},
         {"type": "path", "url": "libs/lsp-protocol"},
         {"type": "path", "url": "libs/rpc-dispatcher"},
         {"type": "path", "url": "libs/rpc-hydrator"},
@@ -14,7 +13,6 @@
         "php": "^8.1",
         "evenement/evenement": "^1.0|^2.0|^3.0",
         "psr/log": "^1.0|^2.0|^3.0",
-        "phplrt/lsp-code-generator": "*",
         "phplrt/lsp-protocol": "*",
         "phplrt/rpc-dispatcher": "*",
         "phplrt/rpc-hydrator": "*",
@@ -31,11 +29,11 @@
         }
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.17",
+        "friendsofphp/php-cs-fixer": "^3.34",
         "monolog/monolog": "^3.3",
-        "phpunit/phpunit": "^10.1",
+        "phpunit/phpunit": "^10.3",
         "symfony/var-dumper": "^5.4|^6.0",
-        "vimeo/psalm": "^5.12"
+        "vimeo/psalm": "^5.15"
     },
     "scripts": {
         "linter": "@linter:check",

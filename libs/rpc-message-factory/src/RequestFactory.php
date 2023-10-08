@@ -2,12 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\RPC\Message;
+namespace Phplrt\RPC\Message\Factory;
 
-use Phplrt\RPC\Message\Exception\IdExceptionInterface;
-use Phplrt\RPC\Message\IdFactory\GeneratorInterface;
-use Phplrt\RPC\Message\IdFactory\Int32Generator;
-use Phplrt\RPC\Message\IdFactory\Int64Generator;
+use Phplrt\RPC\Message\Factory\Exception\IdExceptionInterface;
+use Phplrt\RPC\Message\Factory\IdFactory\GeneratorInterface;
+use Phplrt\RPC\Message\Factory\IdFactory\Int32Generator;
+use Phplrt\RPC\Message\Factory\IdFactory\Int64Generator;
+use Phplrt\RPC\Message\IdInterface;
+use Phplrt\RPC\Message\Notification;
+use Phplrt\RPC\Message\NotificationInterface;
+use Phplrt\RPC\Message\Request;
+use Phplrt\RPC\Message\RequestInterface;
 
 final class RequestFactory implements RequestFactoryInterface
 {

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\RPC\Message\IdFactory;
+namespace Phplrt\RPC\Message\Factory\IdFactory;
 
-use Phplrt\RPC\Message\Exception\IdNotSupportedException;
-use Phplrt\RPC\Message\IdFactory;
-use Phplrt\RPC\Message\IdFactory\IntGenerator\OverflowBehaviour;
-use Phplrt\RPC\Message\IdFactoryInterface;
+use Phplrt\RPC\Message\Factory\Exception\IdNotSupportedException;
+use Phplrt\RPC\Message\Factory\IdFactory;
+use Phplrt\RPC\Message\Factory\IdFactory\IntGenerator\OverflowBehaviour;
+use Phplrt\RPC\Message\Factory\IdFactoryInterface;
 
 /**
  * @template-extends IntGenerator<int<0, 9223372036854775807>>
@@ -25,8 +25,6 @@ final class Int64Generator extends IntGenerator
     private const MIN_VALUE = -0x8000_0000_0000_0000;
 
     /**
-     * @param OverflowBehaviour $onOverflow
-     *
      * @throws IdNotSupportedException If the current platform is not supported.
      */
     public function __construct(

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\RPC\Message;
+namespace Phplrt\RPC\Message\Factory;
 
 use Phplrt\RPC\Message\FailureResponseInterface as Failure;
 use Phplrt\RPC\Message\IdInterface as Id;
@@ -20,8 +20,5 @@ interface ResponseFactoryInterface
      */
     public function createSuccess(Id|Identifiable $id, mixed $result): Success;
 
-    /**
-     * @return Failure
-     */
     public function createFailure(Id|Identifiable $id, int $code, string $message, mixed $data = null): Failure;
 }

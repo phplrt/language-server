@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\RPC\Message\IdFactory\IntGenerator;
+namespace Phplrt\RPC\Message\Factory\IdFactory\IntGenerator;
 
 enum OverflowBehaviour
 {

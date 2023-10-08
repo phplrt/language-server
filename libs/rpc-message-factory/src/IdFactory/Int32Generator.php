@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\RPC\Message\IdFactory;
+namespace Phplrt\RPC\Message\Factory\IdFactory;
 
-use Phplrt\RPC\Message\IdFactory;
-use Phplrt\RPC\Message\IdFactory\IntGenerator\OverflowBehaviour;
-use Phplrt\RPC\Message\IdFactoryInterface;
+use Phplrt\RPC\Message\Factory\IdFactory;
+use Phplrt\RPC\Message\Factory\IdFactory\IntGenerator\OverflowBehaviour;
+use Phplrt\RPC\Message\Factory\IdFactoryInterface;
 
 /**
  * The most compatible generator with all subsystems and platforms.
