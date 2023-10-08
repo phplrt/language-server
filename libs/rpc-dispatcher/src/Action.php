@@ -10,7 +10,6 @@ namespace Phplrt\RPC\Dispatcher;
 final class Action
 {
     /**
-     * @param class-string $type
      * @param \Closure(TInput):mixed $handler
      */
     public function __construct(

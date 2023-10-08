@@ -11,7 +11,7 @@ use Phplrt\RPC\Dispatcher\Attribute\RpcMethod;
  *
  * @template-implements \IteratorAggregate<non-empty-string, Action>
  */
-final class AttributeReader implements ReaderInterface, \IteratorAggregate
+final class AttributeReader implements \IteratorAggregate
 {
     /**
      * @var \ReflectionObject<TContext>
@@ -27,9 +27,6 @@ final class AttributeReader implements ReaderInterface, \IteratorAggregate
         $this->reflection = new \ReflectionObject($context);
     }
 
-    /**
-     * @return class-string
-     */
     private function getMethodType(\ReflectionMethod $reflection, RpcMethod $method): string
     {
         if ($method->type !== null) {
@@ -67,6 +64,7 @@ final class AttributeReader implements ReaderInterface, \IteratorAggregate
             /** @var non-empty-string $name */
             $name = $attribute->name ?? $method->getName();
 
+            /** @psalm-suppress MixedArgumentTypeCoercion */
             yield $name => new Action(
                 type: $this->getMethodType($method, $attribute),
                 handler: $method->getClosure($this->context),
