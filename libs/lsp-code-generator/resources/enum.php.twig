@@ -1,0 +1,42 @@
+
+{% if ctx.documentation or ctx.deprecated or ctx.since %}
+/**
+{%     if ctx.documentation %}
+{{         ctx.documentation | description | phpdoc | raw }}
+{%     endif %}
+{%     if ctx.documentation and (ctx.deprecated or ctx.since) %}
+ *
+{%     endif %}
+{%     if ctx.since %}
+{{         ctx.since | tag('since') | phpdoc }}
+{%     endif %}
+{%     if ctx.deprecated %}
+{{         ctx.deprecated | tag('deprecated') | phpdoc }}
+{%     endif %}
+ */
+{% endif %}
+enum {{ ctx.name }}: {{ ctx.type | type }}
+{
+{% for case in ctx.values %}
+{%     if case.documentation or case.deprecated or case.since %}
+{%     if not loop.first %}
+
+{%     endif %}
+    /**
+{%         if case.documentation %}
+{{             case.documentation | description(7) | phpdoc(1) | raw }}
+{%         endif %}
+{%         if case.documentation and (case.deprecated or case.since) %}
+     *
+{%         endif %}
+{%         if case.since %}
+{{             case.since | tag('since') | phpdoc(1) }}
+{%         endif %}
+{%         if case.deprecated %}
+{{             case.deprecated | tag('deprecated') | phpdoc(1) }}
+{%         endif %}
+     */
+{%     endif %}
+    case {{ case.name | to_upper_snake_case }} = {{ case.value | json_encode | raw }};
+{% endfor %}
+}

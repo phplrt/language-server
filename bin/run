@@ -5,6 +5,7 @@ use App\Connector;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Phplrt\LanguageServer\LanguageServer;
+use Symfony\Component\Process\Process;
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -12,3 +13,11 @@ $logger = new Logger('Language Server', [new StreamHandler(STDOUT)]);
 
 $server = new LanguageServer($logger);
 $server->listen('tcp://0.0.0.0:5007', new Connector($logger));
+
+$process = new Process([
+    'code',
+    \realpath(__DIR__ . '/../extension/vscode'),
+    '--extensionDevelopmentPath=' . \realpath(__DIR__ . '/../extension/vscode'),
+], \realpath(__DIR__ . '/../extension/vscode'));
+$process->start();
+

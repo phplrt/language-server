@@ -1,0 +1,14 @@
+{
+    "name": "phplrt/lsp-code-generator",
+    "require": {
+        "php": "^8.1",
+        "twig/twig": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phplrt\\LanguageServer\\CodeGenerator\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

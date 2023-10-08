@@ -2,7 +2,8 @@
     "name": "phplrt/lsp",
     "type": "library",
     "repositories": [
-        {"type": "path", "url": "libs/protocol"},
+        {"type": "path", "url": "libs/lsp-code-generator"},
+        {"type": "path", "url": "libs/lsp-protocol"},
         {"type": "path", "url": "libs/rpc"},
         {"type": "path", "url": "libs/rpc-dispatcher"},
         {"type": "path", "url": "libs/rpc-hydrator"},
@@ -13,6 +14,7 @@
         "php": "^8.1",
         "evenement/evenement": "^1.0|^2.0|^3.0",
         "psr/log": "^1.0|^2.0|^3.0",
+        "phplrt/lsp-code-generator": "*",
         "phplrt/lsp-protocol": "*",
         "phplrt/rpc": "*",
         "phplrt/rpc-dispatcher": "*",
@@ -31,9 +33,9 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.17",
         "monolog/monolog": "^3.3",
-        "vimeo/psalm": "^5.12",
         "phpunit/phpunit": "^10.1",
-        "symfony/var-dumper": "^5.4|^6.0"
+        "symfony/var-dumper": "^5.4|^6.0",
+        "vimeo/psalm": "^5.12"
     },
     "scripts": {
         "static": "@static:check",
@@ -45,7 +47,10 @@
         "phpcs:fix": "php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes",
 
         "test": "@test:unit",
-        "test:unit": "phpunit --testdox"
+        "test:unit": "phpunit --testdox",
+
+        "run:server": "@php bin/run",
+        "run:vscode": "code ./extension/vscode --extensionDevelopmentPath=extension/vscode"
     },
     "extra": {
         "branch-alias": {
