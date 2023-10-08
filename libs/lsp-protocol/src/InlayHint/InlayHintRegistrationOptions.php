@@ -7,6 +7,7 @@ namespace Phplrt\LanguageServer\Protocol\InlayHint;
 use Phplrt\LanguageServer\Protocol\Notebook\NotebookCellTextDocumentFilter;
 use Phplrt\LanguageServer\Protocol\StaticRegistrationOptions;
 use Phplrt\LanguageServer\Protocol\StaticRegistrationOptionsProvider;
+use Phplrt\LanguageServer\Protocol\TextDocument\TextDocumentFilter;
 use Phplrt\LanguageServer\Protocol\TextDocument\TextDocumentRegistrationOptions;
 use Phplrt\LanguageServer\Protocol\TextDocument\TextDocumentRegistrationOptionsProvider;
 
@@ -25,7 +26,7 @@ final class InlayHintRegistrationOptions extends InlayHintOptions implements
     /**
      * @param ?bool $resolveProvider The server provides support to resolve
      *        additional information for an inlay hint item.
-     * @param list<NotebookCellTextDocumentFilter>|null $documentSelector
+     * @param list<TextDocumentFilter|NotebookCellTextDocumentFilter|string>|null $documentSelector
      *        A document selector to identify the scope of the registration. If set to
      *        null the document selector provided on the client side will be used.
      * @param ?string $id The id used to register the request. The id can be

@@ -30,7 +30,7 @@ final class SemanticTokensRegistrationOptions extends SemanticTokensOptions impl
      *        TODO This field MAY also contain boolean type, but the cuyz/valinor
      *             contains an error due to which a mapping error may occur when
      *             specifying this type.
-     * @param list<TextDocumentFilter|NotebookCellTextDocumentFilter>|null $documentSelector
+     * @param list<TextDocumentFilter|NotebookCellTextDocumentFilter|string>|null $documentSelector
      *        A document selector to identify the scope of the registration.
      *        If set to {@see null} the document selector provided on the client
      *        side will be used.

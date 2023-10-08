@@ -36,7 +36,7 @@ class CodeActionRegistrationOptions extends CodeActionOptions implements
     public function __construct(
         ?array $codeActionKinds = null,
         ?bool $resolveProvider = null,
-        array|null $documentSelector,
+        array|null $documentSelector = null,
     ) {
         $this->documentSelector = $documentSelector;
 

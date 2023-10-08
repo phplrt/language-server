@@ -19,11 +19,16 @@ namespace Phplrt\LanguageServer\Protocol\Experimental;
 class StringValue
 {
     /**
-     * @param snippet $kind The kind of string value.
+     * The kind of string value.
+     */
+    public readonly string $kind;
+
+    /**
      * @param string $value The snippet string.
      */
     public function __construct(
-        public readonly snippet $kind,
         public readonly string $value,
-    ) {}
+    ) {
+        $this->kind = 'snippet';
+    }
 }

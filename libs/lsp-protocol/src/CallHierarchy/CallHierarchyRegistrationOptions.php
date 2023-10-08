@@ -7,6 +7,7 @@ namespace Phplrt\LanguageServer\Protocol\CallHierarchy;
 use Phplrt\LanguageServer\Protocol\Notebook\NotebookCellTextDocumentFilter;
 use Phplrt\LanguageServer\Protocol\StaticRegistrationOptions;
 use Phplrt\LanguageServer\Protocol\StaticRegistrationOptionsProvider;
+use Phplrt\LanguageServer\Protocol\TextDocument\TextDocumentFilter;
 use Phplrt\LanguageServer\Protocol\TextDocument\TextDocumentRegistrationOptions;
 use Phplrt\LanguageServer\Protocol\TextDocument\TextDocumentRegistrationOptionsProvider;
 
@@ -23,7 +24,7 @@ final class CallHierarchyRegistrationOptions extends CallHierarchyOptions implem
     use StaticRegistrationOptionsProvider;
 
     /**
-     * @param list<NotebookCellTextDocumentFilter>|null $documentSelector
+     * @param list<TextDocumentFilter|NotebookCellTextDocumentFilter|string>|null $documentSelector
      *        A document selector to identify the scope of the registration. If
      *        set to {@see null} the document selector provided on the client
      *        side will be used.
