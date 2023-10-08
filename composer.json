@@ -4,11 +4,11 @@
     "repositories": [
         {"type": "path", "url": "libs/lsp-code-generator"},
         {"type": "path", "url": "libs/lsp-protocol"},
-        {"type": "path", "url": "libs/rpc"},
         {"type": "path", "url": "libs/rpc-dispatcher"},
         {"type": "path", "url": "libs/rpc-hydrator"},
         {"type": "path", "url": "libs/rpc-message"},
-        {"type": "path", "url": "libs/rpc-message-factory"}
+        {"type": "path", "url": "libs/rpc-message-factory"},
+        {"type": "path", "url": "libs/rpc-protocol"}
     ],
     "require": {
         "php": "^8.1",
@@ -16,11 +16,11 @@
         "psr/log": "^1.0|^2.0|^3.0",
         "phplrt/lsp-code-generator": "*",
         "phplrt/lsp-protocol": "*",
-        "phplrt/rpc": "*",
         "phplrt/rpc-dispatcher": "*",
         "phplrt/rpc-hydrator": "*",
         "phplrt/rpc-message": "*",
         "phplrt/rpc-message-factory": "*",
+        "phplrt/rpc-protocol": "*",
         "react/socket": "^1.14",
         "symfony/yaml": "^5.4|^6.0"
     },
@@ -38,9 +38,9 @@
         "vimeo/psalm": "^5.12"
     },
     "scripts": {
-        "static": "@static:check",
-        "static:check": "psalm --no-cache",
-        "static:fix": "psalm --no-cache --alter",
+        "linter": "@linter:check",
+        "linter:check": "psalm --no-cache",
+        "linter:fix": "psalm --no-cache --alter",
 
         "phpcs": "@phpcs:check",
         "phpcs:check": "php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes --dry-run",

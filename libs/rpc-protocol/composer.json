@@ -1,5 +1,5 @@
 {
-    "name": "phplrt/rpc",
+    "name": "phplrt/rpc-protocol",
     "require": {
         "php": "^8.1",
         "ext-json": "*",
@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Phplrt\\RPC\\": "src"
+            "Phplrt\\RPC\\Protocol\\": "src"
         }
     },
     "minimum-stability": "dev",

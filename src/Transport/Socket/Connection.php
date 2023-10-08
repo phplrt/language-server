@@ -6,13 +6,13 @@ namespace Phplrt\LanguageServer\Transport\Socket;
 
 use Evenement\EventEmitter;
 use Phplrt\LanguageServer\Connection\ConnectionInterface;
+use Phplrt\RPC\Protocol\DecoderInterface;
+use Phplrt\RPC\Protocol\EncoderInterface;
+use Phplrt\RPC\Protocol\JsonRPCv2;
 use Phplrt\RPC\Message\FailureResponseInterface;
 use Phplrt\RPC\Message\NotificationInterface;
 use Phplrt\RPC\Message\RequestInterface;
 use Phplrt\RPC\Message\SuccessfulResponseInterface;
-use Phplrt\RPC\Protocol\DecoderInterface;
-use Phplrt\RPC\Protocol\EncoderInterface;
-use Phplrt\RPC\Protocol\JsonRPCv2;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 use React\Socket\ConnectionInterface as SocketConnectionInterface;

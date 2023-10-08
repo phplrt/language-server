@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Phplrt\RPC\Protocol;
 
-use Phplrt\RPC\Exception\DecodingException;
-use Phplrt\RPC\Exception\DecodingExceptionInterface;
-use Phplrt\RPC\Exception\EncodingException;
-use Phplrt\RPC\Exception\InvalidFieldTypeException;
-use Phplrt\RPC\Exception\InvalidFieldValueException;
-use Phplrt\RPC\Exception\RequiredFieldNotDefinedException;
+use Phplrt\RPC\Protocol\Exception\DecodingException;
+use Phplrt\RPC\Protocol\Exception\DecodingExceptionInterface;
+use Phplrt\RPC\Protocol\Exception\EncodingException;
+use Phplrt\RPC\Protocol\Exception\InvalidFieldTypeException;
+use Phplrt\RPC\Protocol\Exception\InvalidFieldValueException;
+use Phplrt\RPC\Protocol\Exception\RequiredFieldNotDefinedException;
+use Phplrt\RPC\Protocol\JsonRPC\Signature;
 use Phplrt\RPC\Message\FailureResponseInterface;
 use Phplrt\RPC\Message\IdFactory;
 use Phplrt\RPC\Message\IdFactoryInterface;
@@ -23,7 +24,6 @@ use Phplrt\RPC\Message\ResponseFactory;
 use Phplrt\RPC\Message\ResponseFactoryInterface;
 use Phplrt\RPC\Message\ResponseInterface;
 use Phplrt\RPC\Message\SuccessfulResponseInterface;
-use Phplrt\RPC\Protocol\JsonRPC\Signature;
 
 final class JsonRPCv2 implements EncoderInterface, DecoderInterface
 {

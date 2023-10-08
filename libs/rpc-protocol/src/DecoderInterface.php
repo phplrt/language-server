@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phplrt\RPC\Protocol;
 
-use Phplrt\RPC\Exception\DecodingExceptionInterface;
+use Phplrt\RPC\Protocol\Exception\DecodingExceptionInterface;
 use Phplrt\RPC\Message\MessageInterface;
 
 interface DecoderInterface

@@ -32,6 +32,13 @@ final class Extractor implements ExtractorInterface
         return $result;
     }
 
+    /**
+     * @template TValue of mixed
+     *
+     * @param iterable<array-key, TValue> $value
+     *
+     * @return array<array-key, TValue>
+     */
     private function iterable(iterable $value): array
     {
         $result = [];

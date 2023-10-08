@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Phplrt\LanguageServer\Transport\Socket;
 
 use Evenement\EventEmitter;
-use Phplrt\RPC\Exception\DecodingExceptionInterface;
 use Phplrt\RPC\Protocol\DecoderInterface;
+use Phplrt\RPC\Protocol\Exception\DecodingExceptionInterface;
 use Phplrt\RPC\Protocol\JsonRPCv2;
 
 /**

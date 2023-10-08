@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phplrt\RPC\Exception;
+namespace Phplrt\RPC\Protocol\Exception;
 
 class InvalidFieldTypeException extends DecodingException
 {
