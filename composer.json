@@ -5,6 +5,7 @@
         {"type": "path", "url": "libs/contracts/rpc-message"},
         {"type": "path", "url": "libs/contracts/rpc-message-factory"},
         {"type": "path", "url": "libs/contracts/rpc-hydrator"},
+        {"type": "path", "url": "libs/contracts/rpc-protocol"},
         {"type": "path", "url": "libs/lsp-protocol"},
         {"type": "path", "url": "libs/rpc-dispatcher"},
         {"type": "path", "url": "libs/rpc-hydrator"},
@@ -24,6 +25,7 @@
         "phplrt/rpc-message": "^1.0",
         "phplrt/rpc-message-factory-contracts": "^1.0",
         "phplrt/rpc-message-factory": "^1.0",
+        "phplrt/rpc-protocol-contracts": "^1.0",
         "phplrt/rpc-protocol-jsonrpc": "^1.0",
         "react/socket": "^1.14",
         "symfony/yaml": "^5.4|^6.0"
